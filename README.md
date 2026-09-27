@@ -11,6 +11,9 @@
 ./gradlew test
 ```
 
+## 기획서
+[docs/music_roadmap_v3.md](docs/music_roadmap_v3.md) — 기획·전략 설계·데이터 구조·개발 단계
+
 ## 큐레이션 데이터
 `seed-data/main/seed/catalog.json` — 장르·간선·대표곡·별칭. 서버가 켜질 때 없는 것만 DB에 추가한다.
 안드로이드 앱([MusicLoadMapAndroid](https://github.com/seohongik/MusicLoadMapAndroid))도 이 파일을 함께 쓴다.
