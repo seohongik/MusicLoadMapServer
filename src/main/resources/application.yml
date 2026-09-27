@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: MusicRoadmapServer
+  profiles:
+    default: local
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      naming:
+        implicit-strategy: org.springframework.boot.hibernate.SpringImplicitNamingStrategy
+        physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+
+app:
+  musicbrainz:
+    base-url: https://musicbrainz.org/ws/2
+    # MusicBrainz 이용 규칙: "앱이름/버전 ( 연락처 )". 연락처(이메일 등)는 환경변수 MUSICBRAINZ_CONTACT로 넣는다.
+    user-agent: MusicRoadmap/0.1 ( ${MUSICBRAINZ_CONTACT} )
+    # 초당 1회 제한을 지키기 위한 요청 간격
+    min-interval-ms: 1100
+  genre-mapping:
+    # MOST_VOTED(최다 득표) / MOST_SPECIFIC(구체적인 장르 우선)
+    strategy: MOST_VOTED
+  playback:
+    # 재생 방식 (기획서 17장): NONE(소개만) / SEARCH_LINK(유튜브 검색 연결)
+    strategy: NONE
+  seed:
+    # 큐레이션 데이터 파일 (클래스패스 기준). 서버가 켜질 때 없는 것만 추가한다
+    location: seed/catalog.json
+  track-selection:
+    # 새 유저의 곡 고르기 방식: RANDOM(무작위) / EXCLUDE_DISLIKED(기본 순서) / FAVORITE_ARTIST_FIRST
+    default: RANDOM
+  step-completion:
+    # 스텝 완료 방식 (기획서 19장): MANUAL_NEXT("다음 장르로" 버튼) / ALL_RATED(모든 곡에 반응하면 자동)
+    strategy: MANUAL_NEXT

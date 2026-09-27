@@ -1,0 +1,58 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '4.1.1'
+    id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'com.project'
+version = '0.0.1-SNAPSHOT'
+description = 'MusicRoadmapServer'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springframework.boot:spring-boot-starter-webmvc'
+    // Boot 4부터 RestClient.Builder 자동 설정이 별도 스타터로 분리됨 (MusicBrainz 호출용)
+    implementation 'org.springframework.boot:spring-boot-starter-restclient'
+    compileOnly 'org.projectlombok:lombok'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    runtimeOnly 'com.mysql:mysql-connector-j'
+    // DB 없이 서버를 띄워 볼 때만 쓴다 (bootRun 전용, 배포 jar에는 들어가지 않음)
+    developmentOnly 'com.h2database:h2'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-data-jpa-test'
+    testImplementation 'org.springframework.boot:spring-boot-starter-validation-test'
+    testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
+    testCompileOnly 'org.projectlombok:lombok'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testRuntimeOnly 'com.h2database:h2'
+    testAnnotationProcessor 'org.projectlombok:lombok'
+}
+
+// 큐레이션 데이터(JSON)는 앱과 함께 쓰는 seed-data 폴더에 있다 (기획서 20장)
+sourceSets {
+    main {
+        resources {
+            srcDir 'seed-data/main'
+        }
+    }
+    test {
+        resources {
+            srcDir 'seed-data/fixture'
+        }
+    }
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

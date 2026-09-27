@@ -1,0 +1,2719 @@
+{
+ "_설명": "음악 계보 로드맵의 큐레이션 데이터 (기획서 7·14·17장). 서버와 앱이 같은 파일을 읽는다. 장르를 추가할 때는 이 파일만 고친다.",
+ "genres": [
+  {
+   "code": "COUNTRY",
+   "name": "Country",
+   "nameKo": "컨트리",
+   "originDecade": 1920,
+   "description": "미국 남부 시골의 민요와 발라드에서 출발한, 이야기를 노래하는 음악.",
+   "posX": 20,
+   "posY": 60
+  },
+  {
+   "code": "BLUES",
+   "name": "Blues",
+   "nameKo": "블루스",
+   "originDecade": 1910,
+   "description": "아프리카계 미국인의 노동요와 영가에서 태어난 음악. 거의 모든 대중음악의 뿌리.",
+   "posX": 20,
+   "posY": 300
+  },
+  {
+   "code": "JAZZ",
+   "name": "Jazz",
+   "nameKo": "재즈",
+   "originDecade": 1910,
+   "description": "블루스와 래그타임에서 자라난 즉흥 연주의 음악.",
+   "posX": 20,
+   "posY": 520
+  },
+  {
+   "code": "FOLK",
+   "name": "Folk",
+   "nameKo": "포크",
+   "originDecade": 1940,
+   "description": "통기타 하나로 시대와 사회를 노래한 민중 음악.",
+   "posX": 170,
+   "posY": 60
+  },
+  {
+   "code": "RNB",
+   "name": "R&B",
+   "nameKo": "R&B",
+   "originDecade": 1940,
+   "description": "블루스에 리듬과 스윙을 더해 춤출 수 있게 만든 음악. 로큰롤의 직계 조상.",
+   "posX": 170,
+   "posY": 300
+  },
+  {
+   "code": "ROCKABILLY",
+   "name": "Rockabilly",
+   "nameKo": "로커빌리",
+   "originDecade": 1950,
+   "description": "컨트리와 R&B가 만나 탄생한 초기 로큰롤.",
+   "posX": 320,
+   "posY": 180
+  },
+  {
+   "code": "DOO_WOP",
+   "name": "Doo-wop",
+   "nameKo": "두왑",
+   "originDecade": 1940,
+   "description": "길거리 화음 그룹이 만든, 보컬 하모니 중심의 R&B.",
+   "posX": 320,
+   "posY": 420
+  },
+  {
+   "code": "BRITISH_INVASION",
+   "name": "British Invasion",
+   "nameKo": "브릿 인베이전",
+   "originDecade": 1960,
+   "description": "영국 밴드들이 미국 로큰롤을 재해석해 미국으로 역수출한 흐름.",
+   "posX": 470,
+   "posY": 180
+  },
+  {
+   "code": "FOLK_ROCK",
+   "name": "Folk Rock",
+   "nameKo": "포크 록",
+   "originDecade": 1960,
+   "description": "포크의 가사에 일렉트릭 기타 사운드를 입힌 음악.",
+   "posX": 470,
+   "posY": 40
+  },
+  {
+   "code": "SOUL",
+   "name": "Soul",
+   "nameKo": "소울",
+   "originDecade": 1950,
+   "description": "가스펠의 열정과 R&B의 리듬이 합쳐진, 목소리로 감정을 터뜨리는 음악.",
+   "posX": 470,
+   "posY": 360
+  },
+  {
+   "code": "POP_ROCK",
+   "name": "Pop Rock",
+   "nameKo": "팝 록",
+   "originDecade": 1960,
+   "description": "록의 에너지에 팝의 멜로디와 편곡을 더한 음악.",
+   "posX": 620,
+   "posY": 110
+  },
+  {
+   "code": "PSYCHEDELIC",
+   "name": "Psychedelic Rock",
+   "nameKo": "사이키델릭 록",
+   "originDecade": 1960,
+   "description": "몽환적인 사운드와 긴 즉흥 연주로 의식의 확장을 노래한 록.",
+   "posX": 620,
+   "posY": 300
+  },
+  {
+   "code": "SOUTHERN_ROCK",
+   "name": "Southern Rock",
+   "nameKo": "서던 록",
+   "originDecade": 1970,
+   "description": "미국 남부의 블루스·컨트리 감성을 품은 기타 록.",
+   "posX": 770,
+   "posY": 430
+  },
+  {
+   "code": "PROG",
+   "name": "Progressive Rock",
+   "nameKo": "프로그레시브 록",
+   "originDecade": 1960,
+   "description": "클래식과 재즈의 구성을 빌려 온 길고 복잡한 록.",
+   "posX": 770,
+   "posY": 230
+  },
+  {
+   "code": "GLAM",
+   "name": "Glam Rock",
+   "nameKo": "글램 록",
+   "originDecade": 1970,
+   "description": "화려한 의상과 무대, 귀에 꽂히는 훅이 특징인 70년대 영국 록.",
+   "posX": 770,
+   "posY": 330
+  },
+  {
+   "code": "HARD_ROCK",
+   "name": "Hard Rock",
+   "nameKo": "하드 록",
+   "originDecade": 1960,
+   "description": "블루스 기반의 묵직한 기타 리프와 강렬한 보컬.",
+   "posX": 770,
+   "posY": 120
+  },
+  {
+   "code": "HEAVY_METAL",
+   "name": "Heavy Metal",
+   "nameKo": "헤비메탈",
+   "originDecade": 1970,
+   "description": "하드 록을 더 무겁고 빠르고 어둡게 밀어붙인 음악.",
+   "posX": 920,
+   "posY": 40
+  },
+  {
+   "code": "PUNK",
+   "name": "Punk Rock",
+   "nameKo": "펑크 록",
+   "originDecade": 1970,
+   "description": "세 개의 코드와 분노. 거대해진 록에 반발한 짧고 빠른 음악.",
+   "posX": 920,
+   "posY": 260
+  },
+  {
+   "code": "NEW_WAVE",
+   "name": "New Wave",
+   "nameKo": "뉴 웨이브",
+   "originDecade": 1970,
+   "description": "펑크의 태도에 신시사이저와 팝 감각을 더한 음악.",
+   "posX": 920,
+   "posY": 150
+  },
+  {
+   "code": "GRUNGE",
+   "name": "Grunge",
+   "nameKo": "그런지",
+   "originDecade": 1980,
+   "description": "시애틀에서 시작된, 펑크와 메탈이 섞인 거칠고 우울한 록.",
+   "posX": 1220,
+   "posY": 60
+  },
+  {
+   "code": "HARDCORE",
+   "name": "Hardcore Punk",
+   "nameKo": "하드코어 펑크",
+   "originDecade": 1980,
+   "description": "펑크를 더 빠르고 짧고 격렬하게 만든 미국 언더그라운드 음악.",
+   "posX": 1070,
+   "posY": 320
+  },
+  {
+   "code": "FUNK",
+   "name": "Funk",
+   "nameKo": "펑크(Funk)",
+   "originDecade": 1960,
+   "description": "베이스와 리듬이 주인공인, 몸이 먼저 반응하는 그루브 음악.",
+   "posX": 620,
+   "posY": 480
+  },
+  {
+   "code": "DISCO",
+   "name": "Disco",
+   "nameKo": "디스코",
+   "originDecade": 1970,
+   "description": "펑크(Funk)의 그루브를 쿵쿵 울리는 4박 킥 드럼 위에 올린 댄스 음악.",
+   "posX": 770,
+   "posY": 560
+  },
+  {
+   "code": "HIP_HOP",
+   "name": "Hip Hop",
+   "nameKo": "힙합",
+   "originDecade": 1970,
+   "description": "브롱크스 파티에서 DJ의 브레이크 비트 위에 랩을 얹으며 시작된 문화.",
+   "posX": 920,
+   "posY": 560
+  },
+  {
+   "code": "INDIE",
+   "name": "Indie Rock",
+   "nameKo": "인디 록",
+   "originDecade": 1980,
+   "description": "메이저 음반사 밖에서 자기 방식대로 만든 기타 록.",
+   "posX": 1070,
+   "posY": 200
+  },
+  {
+   "code": "BRITPOP",
+   "name": "Britpop",
+   "nameKo": "브릿팝",
+   "originDecade": 1990,
+   "description": "비틀즈와 킨크스를 계승해 90년대 영국을 노래한 기타 팝.",
+   "posX": 1220,
+   "posY": 200
+  },
+  {
+   "code": "POST_BRITPOP",
+   "name": "Post-Britpop",
+   "nameKo": "포스트 브릿팝",
+   "originDecade": 1990,
+   "description": "브릿팝 이후, 더 서정적이고 내성적인 멜로디로 넘어간 영국 록.",
+   "posX": 1370,
+   "posY": 200
+  },
+  {
+   "code": "ALT_ROCK",
+   "name": "Alternative Rock",
+   "nameKo": "얼터너티브 록",
+   "originDecade": 1980,
+   "description": "주류 록의 대안으로 등장한, 장르의 경계를 넘나드는 록.",
+   "posX": 1070,
+   "posY": 60
+  },
+  {
+   "code": "SWING",
+   "name": "Swing",
+   "nameKo": "스윙",
+   "originDecade": 1930,
+   "description": "빅밴드 편성과 춤추기 좋은 리듬으로 재즈를 대중음악의 중심에 올린 시대.",
+   "posX": 170,
+   "posY": 640
+  },
+  {
+   "code": "BEBOP",
+   "name": "Bebop",
+   "nameKo": "비밥",
+   "originDecade": 1940,
+   "description": "춤보다 감상을 위한 재즈. 빠른 템포와 복잡한 화성 위에서 즉흥 연주를 겨룬 음악.",
+   "posX": 320,
+   "posY": 700
+  },
+  {
+   "code": "COOL_JAZZ",
+   "name": "Cool Jazz",
+   "nameKo": "쿨 재즈",
+   "originDecade": 1950,
+   "description": "비밥의 열기를 식혀 차분하고 여백 있는 소리로 만든 재즈.",
+   "posX": 470,
+   "posY": 640
+  },
+  {
+   "code": "HARD_BOP",
+   "name": "Hard Bop",
+   "nameKo": "하드 밥",
+   "originDecade": 1950,
+   "description": "비밥에 블루스와 가스펠의 뜨거움을 되돌린 재즈.",
+   "posX": 470,
+   "posY": 760
+  },
+  {
+   "code": "FREE_JAZZ",
+   "name": "Free Jazz",
+   "nameKo": "프리 재즈",
+   "originDecade": 1960,
+   "description": "정해진 코드와 박자에서 벗어나 소리 자체로 대화하는 재즈.",
+   "posX": 620,
+   "posY": 760
+  },
+  {
+   "code": "JAZZ_FUSION",
+   "name": "Jazz Fusion",
+   "nameKo": "재즈 퓨전",
+   "originDecade": 1970,
+   "description": "재즈 즉흥에 록·펑크(Funk)의 전기 사운드와 리듬을 섞은 음악.",
+   "posX": 770,
+   "posY": 680
+  },
+  {
+   "code": "ELECTRONIC",
+   "name": "Electronic",
+   "nameKo": "일렉트로닉",
+   "originDecade": 1970,
+   "description": "신시사이저와 전자 장비로 만든 소리를 음악의 중심에 놓은 흐름. 독일의 실험적인 록에서 자라났다.",
+   "posX": 920,
+   "posY": 400
+  },
+  {
+   "code": "SYNTH_POP",
+   "name": "Synth-pop",
+   "nameKo": "신스팝",
+   "originDecade": 1980,
+   "description": "기타 대신 신시사이저를 앞세운 팝. 뉴 웨이브와 전자음악이 만난 80년대의 소리.",
+   "posX": 1070,
+   "posY": 420
+  },
+  {
+   "code": "HOUSE",
+   "name": "House",
+   "nameKo": "하우스",
+   "originDecade": 1980,
+   "description": "디스코의 4박 킥을 드럼 머신과 신시사이저로 다시 만든 시카고의 클럽 음악.",
+   "posX": 1220,
+   "posY": 440
+  },
+  {
+   "code": "TECHNO",
+   "name": "Techno",
+   "nameKo": "테크노",
+   "originDecade": 1980,
+   "description": "크라프트베르크와 펑크(Funk)를 디트로이트에서 섞어 만든 기계적인 댄스 음악.",
+   "posX": 1220,
+   "posY": 560
+  },
+  {
+   "code": "DRUM_AND_BASS",
+   "name": "Drum and Bass",
+   "nameKo": "드럼 앤 베이스",
+   "originDecade": 1990,
+   "description": "힙합 브레이크비트를 두 배 빠르게 쪼개고 묵직한 베이스를 깐 영국 레이브 음악.",
+   "posX": 1370,
+   "posY": 560
+  },
+  {
+   "code": "TRIP_HOP",
+   "name": "Trip Hop",
+   "nameKo": "트립합",
+   "originDecade": 1990,
+   "description": "힙합의 느린 비트 위에 어둡고 몽환적인 분위기를 얹은 브리스틀의 음악.",
+   "posX": 1370,
+   "posY": 420
+  },
+  {
+   "code": "EAST_COAST",
+   "name": "East Coast Hip Hop",
+   "nameKo": "이스트코스트 힙합",
+   "originDecade": 1990,
+   "description": "뉴욕을 중심으로 촘촘한 가사와 묵직한 붐뱁 비트를 앞세운 힙합.",
+   "posX": 1070,
+   "posY": 520
+  },
+  {
+   "code": "G_FUNK",
+   "name": "G-funk",
+   "nameKo": "지펑크",
+   "originDecade": 1990,
+   "description": "P-Funk의 늘어지는 신시사이저와 베이스를 샘플로 깐 서부 해안의 힙합.",
+   "posX": 1070,
+   "posY": 620
+  },
+  {
+   "code": "SOUTHERN_HIP_HOP",
+   "name": "Southern Hip Hop",
+   "nameKo": "서던 힙합",
+   "originDecade": 1990,
+   "description": "애틀랜타·휴스턴·멤피스 등 미국 남부에서 자란, 느리고 굵은 베이스의 힙합.",
+   "posX": 1070,
+   "posY": 720
+  },
+  {
+   "code": "JAZZ_RAP",
+   "name": "Jazz Rap",
+   "nameKo": "재즈 랩",
+   "originDecade": 1990,
+   "description": "재즈 레코드의 샘플과 여유로운 랩으로 만든, 힙합의 부드럽고 지적인 갈래.",
+   "posX": 920,
+   "posY": 760
+  },
+  {
+   "code": "TRAP",
+   "name": "Trap",
+   "nameKo": "트랩",
+   "originDecade": 2000,
+   "description": "808 드럼의 굵은 베이스와 잘게 쪼갠 하이햇이 특징인 애틀랜타발 힙합.",
+   "posX": 1220,
+   "posY": 720
+  }
+ ],
+ "edges": [
+  {
+   "from": "COUNTRY",
+   "to": "FOLK"
+  },
+  {
+   "from": "COUNTRY",
+   "to": "ROCKABILLY"
+  },
+  {
+   "from": "BLUES",
+   "to": "RNB"
+  },
+  {
+   "from": "BLUES",
+   "to": "JAZZ"
+  },
+  {
+   "from": "FOLK",
+   "to": "FOLK_ROCK"
+  },
+  {
+   "from": "RNB",
+   "to": "ROCKABILLY"
+  },
+  {
+   "from": "RNB",
+   "to": "DOO_WOP"
+  },
+  {
+   "from": "RNB",
+   "to": "SOUL"
+  },
+  {
+   "from": "RNB",
+   "to": "HARD_ROCK"
+  },
+  {
+   "from": "ROCKABILLY",
+   "to": "BRITISH_INVASION"
+  },
+  {
+   "from": "DOO_WOP",
+   "to": "SOUL"
+  },
+  {
+   "from": "DOO_WOP",
+   "to": "FUNK"
+  },
+  {
+   "from": "BRITISH_INVASION",
+   "to": "FOLK_ROCK"
+  },
+  {
+   "from": "BRITISH_INVASION",
+   "to": "POP_ROCK"
+  },
+  {
+   "from": "BRITISH_INVASION",
+   "to": "SOUL"
+  },
+  {
+   "from": "BRITISH_INVASION",
+   "to": "HARD_ROCK"
+  },
+  {
+   "from": "BRITISH_INVASION",
+   "to": "BRITPOP"
+  },
+  {
+   "from": "FOLK_ROCK",
+   "to": "NEW_WAVE"
+  },
+  {
+   "from": "SOUL",
+   "to": "PSYCHEDELIC"
+  },
+  {
+   "from": "SOUL",
+   "to": "FUNK"
+  },
+  {
+   "from": "PSYCHEDELIC",
+   "to": "PROG"
+  },
+  {
+   "from": "PSYCHEDELIC",
+   "to": "SOUTHERN_ROCK"
+  },
+  {
+   "from": "PSYCHEDELIC",
+   "to": "GLAM"
+  },
+  {
+   "from": "PSYCHEDELIC",
+   "to": "HARD_ROCK"
+  },
+  {
+   "from": "POP_ROCK",
+   "to": "HARD_ROCK"
+  },
+  {
+   "from": "POP_ROCK",
+   "to": "NEW_WAVE"
+  },
+  {
+   "from": "HARD_ROCK",
+   "to": "HEAVY_METAL"
+  },
+  {
+   "from": "HARD_ROCK",
+   "to": "PUNK"
+  },
+  {
+   "from": "HARD_ROCK",
+   "to": "GRUNGE"
+  },
+  {
+   "from": "HEAVY_METAL",
+   "to": "GRUNGE"
+  },
+  {
+   "from": "GLAM",
+   "to": "PUNK"
+  },
+  {
+   "from": "GLAM",
+   "to": "BRITPOP"
+  },
+  {
+   "from": "PUNK",
+   "to": "HARDCORE"
+  },
+  {
+   "from": "PUNK",
+   "to": "NEW_WAVE"
+  },
+  {
+   "from": "PUNK",
+   "to": "INDIE"
+  },
+  {
+   "from": "NEW_WAVE",
+   "to": "INDIE"
+  },
+  {
+   "from": "INDIE",
+   "to": "BRITPOP"
+  },
+  {
+   "from": "INDIE",
+   "to": "ALT_ROCK"
+  },
+  {
+   "from": "ALT_ROCK",
+   "to": "GRUNGE"
+  },
+  {
+   "from": "BRITPOP",
+   "to": "POST_BRITPOP"
+  },
+  {
+   "from": "FUNK",
+   "to": "DISCO"
+  },
+  {
+   "from": "FUNK",
+   "to": "HIP_HOP"
+  },
+  {
+   "from": "DISCO",
+   "to": "HIP_HOP"
+  },
+  {
+   "from": "JAZZ",
+   "to": "SWING"
+  },
+  {
+   "from": "SWING",
+   "to": "BEBOP"
+  },
+  {
+   "from": "SWING",
+   "to": "RNB"
+  },
+  {
+   "from": "BEBOP",
+   "to": "COOL_JAZZ"
+  },
+  {
+   "from": "BEBOP",
+   "to": "HARD_BOP"
+  },
+  {
+   "from": "HARD_BOP",
+   "to": "FREE_JAZZ"
+  },
+  {
+   "from": "HARD_BOP",
+   "to": "JAZZ_FUSION"
+  },
+  {
+   "from": "PSYCHEDELIC",
+   "to": "JAZZ_FUSION"
+  },
+  {
+   "from": "FUNK",
+   "to": "JAZZ_FUSION"
+  },
+  {
+   "from": "PROG",
+   "to": "ELECTRONIC"
+  },
+  {
+   "from": "NEW_WAVE",
+   "to": "SYNTH_POP"
+  },
+  {
+   "from": "ELECTRONIC",
+   "to": "SYNTH_POP"
+  },
+  {
+   "from": "DISCO",
+   "to": "HOUSE"
+  },
+  {
+   "from": "ELECTRONIC",
+   "to": "HOUSE"
+  },
+  {
+   "from": "ELECTRONIC",
+   "to": "TECHNO"
+  },
+  {
+   "from": "FUNK",
+   "to": "TECHNO"
+  },
+  {
+   "from": "HIP_HOP",
+   "to": "DRUM_AND_BASS"
+  },
+  {
+   "from": "TECHNO",
+   "to": "DRUM_AND_BASS"
+  },
+  {
+   "from": "HIP_HOP",
+   "to": "TRIP_HOP"
+  },
+  {
+   "from": "ELECTRONIC",
+   "to": "TRIP_HOP"
+  },
+  {
+   "from": "HIP_HOP",
+   "to": "EAST_COAST"
+  },
+  {
+   "from": "HIP_HOP",
+   "to": "G_FUNK"
+  },
+  {
+   "from": "FUNK",
+   "to": "G_FUNK"
+  },
+  {
+   "from": "HIP_HOP",
+   "to": "SOUTHERN_HIP_HOP"
+  },
+  {
+   "from": "SOUTHERN_HIP_HOP",
+   "to": "TRAP"
+  },
+  {
+   "from": "HIP_HOP",
+   "to": "JAZZ_RAP"
+  },
+  {
+   "from": "HARD_BOP",
+   "to": "JAZZ_RAP"
+  }
+ ],
+ "tracks": [
+  {
+   "genre": "COUNTRY",
+   "title": "Your Cheatin' Heart",
+   "artist": "Hank Williams",
+   "year": 1953,
+   "intro": "컨트리의 교과서. 짧고 솔직한 가사로 이후 컨트리 작곡의 기준이 된 싱어송라이터."
+  },
+  {
+   "genre": "COUNTRY",
+   "title": "I Walk the Line",
+   "artist": "Johnny Cash",
+   "year": 1956,
+   "intro": "'맨 인 블랙'. 낮은 목소리와 반항적인 태도로 컨트리와 록을 이어 준 인물."
+  },
+  {
+   "genre": "COUNTRY",
+   "title": "Crazy",
+   "artist": "Patsy Cline",
+   "year": 1961,
+   "intro": "컨트리에 팝 발라드의 세련됨을 더한 '내슈빌 사운드'의 대표 보컬."
+  },
+  {
+   "genre": "COUNTRY",
+   "title": "Jolene",
+   "artist": "Dolly Parton",
+   "year": 1973,
+   "intro": "작곡가이자 보컬리스트. 컨트리를 대중 팝 차트까지 끌어올린 아이콘."
+  },
+  {
+   "genre": "COUNTRY",
+   "title": "On the Road Again",
+   "artist": "Willie Nelson",
+   "year": 1980,
+   "intro": "아웃로 컨트리의 대표. 내슈빌의 매끈한 제작 방식을 거부하고 자기 방식대로 노래한 싱어송라이터."
+  },
+  {
+   "genre": "COUNTRY",
+   "title": "Coal Miner's Daughter",
+   "artist": "Loretta Lynn",
+   "year": 1970,
+   "intro": "탄광촌에서 자란 삶을 솔직하게 노래해 여성 컨트리의 목소리를 넓힌 가수."
+  },
+  {
+   "genre": "BLUES",
+   "title": "Cross Road Blues",
+   "artist": "Robert Johnson",
+   "year": 1937,
+   "intro": "델타 블루스의 전설. 몇 안 되는 녹음으로 60년대 영국 록 세대에 결정적 영향을 줌."
+  },
+  {
+   "genre": "BLUES",
+   "title": "Hoochie Coochie Man",
+   "artist": "Muddy Waters",
+   "year": 1954,
+   "intro": "시골의 델타 블루스를 시카고로 가져와 전기 기타로 키운 '시카고 블루스'의 아버지."
+  },
+  {
+   "genre": "BLUES",
+   "title": "The Thrill Is Gone",
+   "artist": "B.B. King",
+   "year": 1969,
+   "intro": "한 음 한 음 울리는 기타 솔로로 '블루스의 왕'이라 불린 기타리스트."
+  },
+  {
+   "genre": "BLUES",
+   "title": "Smokestack Lightnin'",
+   "artist": "Howlin' Wolf",
+   "year": 1956,
+   "intro": "거친 목소리와 압도적인 무대로 시카고 블루스의 야성을 대표한 보컬."
+  },
+  {
+   "genre": "BLUES",
+   "title": "Boom Boom",
+   "artist": "John Lee Hooker",
+   "year": 1962,
+   "intro": "한 코드로 밀어붙이는 부기 리듬으로 블루스의 그루브를 만든 기타리스트."
+  },
+  {
+   "genre": "BLUES",
+   "title": "I'd Rather Go Blind",
+   "artist": "Etta James",
+   "year": 1968,
+   "intro": "블루스·R&B·소울을 넘나든 거친 목소리의 여성 보컬."
+  },
+  {
+   "genre": "JAZZ",
+   "title": "West End Blues",
+   "artist": "Louis Armstrong",
+   "year": 1928,
+   "intro": "즉흥 솔로를 재즈의 중심으로 만든 트럼펫 연주자이자 보컬."
+  },
+  {
+   "genre": "JAZZ",
+   "title": "So What",
+   "artist": "Miles Davis",
+   "year": 1959,
+   "intro": "쿨 재즈, 모달 재즈, 퓨전까지 재즈의 방향을 여러 번 바꾼 트럼펫 연주자."
+  },
+  {
+   "genre": "JAZZ",
+   "title": "Giant Steps",
+   "artist": "John Coltrane",
+   "year": 1960,
+   "intro": "빠르고 복잡한 코드 진행을 밀어붙여 재즈 연주의 한계를 넓힌 색소폰 연주자."
+  },
+  {
+   "genre": "JAZZ",
+   "title": "Take Five",
+   "artist": "The Dave Brubeck Quartet",
+   "year": 1959,
+   "intro": "5/4박자 같은 낯선 박자를 대중적인 재즈 히트로 만든 4인조."
+  },
+  {
+   "genre": "JAZZ",
+   "title": "Take the \"A\" Train",
+   "artist": "Duke Ellington",
+   "year": 1941,
+   "intro": "재즈를 오케스트라 작곡의 예술로 끌어올린 밴드 리더이자 작곡가."
+  },
+  {
+   "genre": "JAZZ",
+   "title": "Strange Fruit",
+   "artist": "Billie Holiday",
+   "year": 1939,
+   "intro": "가사 한 줄 한 줄에 감정을 싣는 창법으로 재즈 보컬의 기준을 만든 가수."
+  },
+  {
+   "genre": "FOLK",
+   "title": "This Land Is Your Land",
+   "artist": "Woody Guthrie",
+   "year": 1945,
+   "intro": "대공황 시기 노동자와 떠돌이의 삶을 노래한 미국 포크의 원형."
+  },
+  {
+   "genre": "FOLK",
+   "title": "Blowin' in the Wind",
+   "artist": "Bob Dylan",
+   "year": 1963,
+   "intro": "60년대 포크 리바이벌의 목소리. 시 같은 가사로 대중음악 가사의 수준을 바꿈."
+  },
+  {
+   "genre": "FOLK",
+   "title": "Diamonds & Rust",
+   "artist": "Joan Baez",
+   "year": 1975,
+   "intro": "맑은 목소리로 포크 리바이벌과 민권 운동을 함께 이끈 가수."
+  },
+  {
+   "genre": "FOLK",
+   "title": "Puff, the Magic Dragon",
+   "artist": "Peter, Paul and Mary",
+   "year": 1963,
+   "intro": "3인 화음으로 포크를 라디오 히트곡으로 만든 그룹."
+  },
+  {
+   "genre": "FOLK",
+   "title": "Where Have All the Flowers Gone?",
+   "artist": "Pete Seeger",
+   "year": 1960,
+   "intro": "노래로 사회운동을 이끌며 1940년대 포크와 60년대 포크 리바이벌을 이어 준 인물."
+  },
+  {
+   "genre": "FOLK",
+   "title": "Tom Dooley",
+   "artist": "The Kingston Trio",
+   "year": 1958,
+   "intro": "'Tom Dooley'의 히트로 50년대 말 포크 붐에 불을 붙인 3인조."
+  },
+  {
+   "genre": "RNB",
+   "title": "Ain't That a Shame",
+   "artist": "Fats Domino",
+   "year": 1955,
+   "intro": "뉴올리언스 피아노와 느긋한 리듬으로 R&B를 전국 히트로 만든 피아니스트."
+  },
+  {
+   "genre": "RNB",
+   "title": "Tutti Frutti",
+   "artist": "Little Richard",
+   "year": 1955,
+   "intro": "폭발적인 샤우팅과 피아노로 로큰롤의 에너지를 정의한 인물."
+  },
+  {
+   "genre": "RNB",
+   "title": "What'd I Say",
+   "artist": "Ray Charles",
+   "year": 1959,
+   "intro": "가스펠과 R&B를 섞어 소울로 가는 문을 연 '천재'."
+  },
+  {
+   "genre": "RNB",
+   "title": "Johnny B. Goode",
+   "artist": "Chuck Berry",
+   "year": 1958,
+   "intro": "기타 리프와 10대의 이야기로 로큰롤 기타의 문법을 만든 작곡가."
+  },
+  {
+   "genre": "RNB",
+   "title": "Bo Diddley",
+   "artist": "Bo Diddley",
+   "year": 1955,
+   "intro": "자기 이름이 붙은 '보 디들리 비트'로 로큰롤 리듬의 한 축을 만든 기타리스트."
+  },
+  {
+   "genre": "RNB",
+   "title": "A Fool in Love",
+   "artist": "Ike & Tina Turner",
+   "year": 1960,
+   "intro": "폭발적인 무대와 보컬로 R&B의 에너지를 보여 준 듀오. 티나 터너가 스타가 된 출발점."
+  },
+  {
+   "genre": "ROCKABILLY",
+   "title": "That's All Right",
+   "artist": "Elvis Presley",
+   "year": 1954,
+   "intro": "컨트리와 R&B를 한 곡에 섞어 로큰롤을 전 세계에 퍼뜨린 '로큰롤의 왕'."
+  },
+  {
+   "genre": "ROCKABILLY",
+   "title": "Blue Suede Shoes",
+   "artist": "Carl Perkins",
+   "year": 1956,
+   "intro": "선 레코드 출신 기타리스트. 로커빌리 기타 사운드의 원형을 만듦."
+  },
+  {
+   "genre": "ROCKABILLY",
+   "title": "Peggy Sue",
+   "artist": "Buddy Holly",
+   "year": 1957,
+   "intro": "기타 둘·베이스·드럼 편성과 자작곡 문화로 비틀즈 세대에 큰 영향을 준 인물."
+  },
+  {
+   "genre": "ROCKABILLY",
+   "title": "Summertime Blues",
+   "artist": "Eddie Cochran",
+   "year": 1958,
+   "intro": "10대의 불만을 노래한 로커빌리 기타리스트. 영국 로커들이 가장 많이 따라 한 사람 중 하나."
+  },
+  {
+   "genre": "ROCKABILLY",
+   "title": "Be-Bop-A-Lula",
+   "artist": "Gene Vincent",
+   "year": 1956,
+   "intro": "가죽 재킷과 반항적인 이미지로 로커빌리의 거친 면을 대표한 가수."
+  },
+  {
+   "genre": "ROCKABILLY",
+   "title": "Bye Bye Love",
+   "artist": "The Everly Brothers",
+   "year": 1957,
+   "intro": "컨트리식 형제 화음을 로큰롤에 입혀 비틀즈와 사이먼 앤 가펑클의 화음에 영향을 준 듀오."
+  },
+  {
+   "genre": "DOO_WOP",
+   "title": "Earth Angel",
+   "artist": "The Penguins",
+   "year": 1954,
+   "intro": "'Earth Angel' 한 곡으로 두왑을 전국 히트 장르로 만든 LA의 보컬 그룹."
+  },
+  {
+   "genre": "DOO_WOP",
+   "title": "Only You",
+   "artist": "The Platters",
+   "year": 1955,
+   "intro": "매끄러운 화음과 발라드로 두왑을 성인 팝 차트까지 올린 그룹."
+  },
+  {
+   "genre": "DOO_WOP",
+   "title": "There Goes My Baby",
+   "artist": "The Drifters",
+   "year": 1959,
+   "intro": "두왑 화음에 현악 편곡을 입혀 R&B 제작 방식을 바꾼 그룹."
+  },
+  {
+   "genre": "DOO_WOP",
+   "title": "Yakety Yak",
+   "artist": "The Coasters",
+   "year": 1958,
+   "intro": "재치 있는 가사와 코믹한 연기로 두왑에 이야기를 담은 그룹."
+  },
+  {
+   "genre": "DOO_WOP",
+   "title": "In the Still of the Night",
+   "artist": "The Five Satins",
+   "year": 1956,
+   "intro": "두왑 발라드의 교과서로 꼽히는 곡을 남긴 코네티컷의 보컬 그룹."
+  },
+  {
+   "genre": "DOO_WOP",
+   "title": "Why Do Fools Fall in Love",
+   "artist": "Frankie Lymon & The Teenagers",
+   "year": 1956,
+   "intro": "10대 리드 보컬로 두왑을 청소년의 음악으로 만든 그룹."
+  },
+  {
+   "genre": "BRITISH_INVASION",
+   "title": "I Want to Hold Your Hand",
+   "artist": "The Beatles",
+   "year": 1963,
+   "intro": "미국 로큰롤을 영국식으로 다시 써서 1964년 미국을 점령한 밴드. 이후 거의 모든 록의 출발점."
+  },
+  {
+   "genre": "BRITISH_INVASION",
+   "title": "You Really Got Me",
+   "artist": "The Kinks",
+   "year": 1964,
+   "intro": "찢어지는 듯한 기타 톤과 영국적인 가사로 하드 록과 브릿팝 양쪽에 영향을 준 밴드."
+  },
+  {
+   "genre": "BRITISH_INVASION",
+   "title": "(I Can't Get No) Satisfaction",
+   "artist": "The Rolling Stones",
+   "year": 1965,
+   "intro": "블루스를 가장 거칠게 해석한 영국 밴드. '나쁜 남자' 록의 원형."
+  },
+  {
+   "genre": "BRITISH_INVASION",
+   "title": "The House of the Rising Sun",
+   "artist": "The Animals",
+   "year": 1964,
+   "intro": "미국 포크·블루스 곡을 어둡고 무거운 록으로 바꾼 뉴캐슬 밴드."
+  },
+  {
+   "genre": "BRITISH_INVASION",
+   "title": "My Generation",
+   "artist": "The Who",
+   "year": 1965,
+   "intro": "폭발적인 무대와 '우리 세대'의 분노로 브릿 인베이전에서 가장 시끄러운 쪽을 맡은 밴드."
+  },
+  {
+   "genre": "BRITISH_INVASION",
+   "title": "For Your Love",
+   "artist": "The Yardbirds",
+   "year": 1965,
+   "intro": "에릭 클랩튼·제프 벡·지미 페이지가 차례로 거쳐 간 '기타리스트 사관학교' 같은 밴드."
+  },
+  {
+   "genre": "FOLK_ROCK",
+   "title": "Mr. Tambourine Man",
+   "artist": "The Byrds",
+   "year": 1965,
+   "intro": "밥 딜런의 곡을 12현 일렉트릭 기타로 연주해 포크 록을 탄생시킨 밴드."
+  },
+  {
+   "genre": "FOLK_ROCK",
+   "title": "The Sound of Silence",
+   "artist": "Simon & Garfunkel",
+   "year": 1965,
+   "intro": "섬세한 화음과 문학적인 가사로 포크 록을 대중화한 듀오."
+  },
+  {
+   "genre": "FOLK_ROCK",
+   "title": "Like a Rolling Stone",
+   "artist": "Bob Dylan",
+   "year": 1965,
+   "intro": "1965년 일렉트릭 기타를 들고 나와 포크 팬들을 충격에 빠뜨리며 포크 록 시대를 연 인물."
+  },
+  {
+   "genre": "FOLK_ROCK",
+   "title": "Have You Ever Seen the Rain",
+   "artist": "Creedence Clearwater Revival",
+   "year": 1970,
+   "intro": "미국 남부 루츠 음악을 짧고 단단한 록 싱글로 만든 밴드."
+  },
+  {
+   "genre": "FOLK_ROCK",
+   "title": "California Dreamin'",
+   "artist": "The Mamas & the Papas",
+   "year": 1965,
+   "intro": "포크 화음에 팝 편곡을 더해 캘리포니아 포크 록을 대표한 4인조."
+  },
+  {
+   "genre": "FOLK_ROCK",
+   "title": "For What It's Worth",
+   "artist": "Buffalo Springfield",
+   "year": 1967,
+   "intro": "닐 영과 스티븐 스틸스가 있던 밴드. 포크 록에 시대의 긴장감을 담았다."
+  },
+  {
+   "genre": "SOUL",
+   "title": "A Change Is Gonna Come",
+   "artist": "Sam Cooke",
+   "year": 1964,
+   "intro": "가스펠 가수에서 팝으로 넘어와 소울의 목소리를 만든 가수. 민권 운동의 노래를 남김."
+  },
+  {
+   "genre": "SOUL",
+   "title": "Respect",
+   "artist": "Aretha Franklin",
+   "year": 1967,
+   "intro": "'소울의 여왕'. 가스펠 창법으로 소울의 감정 표현을 끝까지 끌어올림."
+  },
+  {
+   "genre": "SOUL",
+   "title": "(Sittin' On) The Dock of the Bay",
+   "artist": "Otis Redding",
+   "year": 1968,
+   "intro": "멤피스 스택스 레코드의 대표 보컬. 거칠고 뜨거운 서던 소울의 상징."
+  },
+  {
+   "genre": "SOUL",
+   "title": "What's Going On",
+   "artist": "Marvin Gaye",
+   "year": 1971,
+   "intro": "매끄러운 모타운 소울에 사회적 메시지를 담아 앨범 단위의 소울을 연 가수."
+  },
+  {
+   "genre": "SOUL",
+   "title": "Superstition",
+   "artist": "Stevie Wonder",
+   "year": 1972,
+   "intro": "어린 천재에서 70년대 소울의 작곡·편곡 혁신가로 자란 음악가."
+  },
+  {
+   "genre": "SOUL",
+   "title": "Let's Stay Together",
+   "artist": "Al Green",
+   "year": 1971,
+   "intro": "부드러운 팔세토와 느긋한 그루브로 70년대 멤피스 소울을 대표한 가수."
+  },
+  {
+   "genre": "POP_ROCK",
+   "title": "Good Vibrations",
+   "artist": "The Beach Boys",
+   "year": 1966,
+   "intro": "겹겹이 쌓은 화음과 스튜디오 실험으로 팝 록 편곡의 수준을 끌어올린 밴드."
+  },
+  {
+   "genre": "POP_ROCK",
+   "title": "Your Song",
+   "artist": "Elton John",
+   "year": 1970,
+   "intro": "피아노와 멜로디로 70년대 팝 록을 이끈 싱어송라이터."
+  },
+  {
+   "genre": "POP_ROCK",
+   "title": "Dreams",
+   "artist": "Fleetwood Mac",
+   "year": 1977,
+   "intro": "블루스 밴드에서 출발해 매끄러운 팝 록으로 70년대 최고 판매 앨범 중 하나를 만든 밴드."
+  },
+  {
+   "genre": "POP_ROCK",
+   "title": "Sweet Caroline",
+   "artist": "Neil Diamond",
+   "year": 1969,
+   "intro": "작곡가 출신으로 따라 부르기 쉬운 팝 록 히트를 연달아 낸 가수."
+  },
+  {
+   "genre": "POP_ROCK",
+   "title": "Piano Man",
+   "artist": "Billy Joel",
+   "year": 1973,
+   "intro": "도시의 이야기를 피아노 팝 록으로 풀어낸 뉴욕의 싱어송라이터."
+  },
+  {
+   "genre": "POP_ROCK",
+   "title": "Bohemian Rhapsody",
+   "artist": "Queen",
+   "year": 1975,
+   "intro": "오페라 같은 구성과 겹겹의 화음으로 팝 록의 규모를 키운 영국 밴드."
+  },
+  {
+   "genre": "PSYCHEDELIC",
+   "title": "Light My Fire",
+   "artist": "The Doors",
+   "year": 1967,
+   "intro": "시적인 가사와 오르간 사운드로 어둡고 몽환적인 사이키델릭을 만든 밴드."
+  },
+  {
+   "genre": "PSYCHEDELIC",
+   "title": "White Rabbit",
+   "artist": "Jefferson Airplane",
+   "year": 1967,
+   "intro": "샌프란시스코 히피 문화를 대표한 밴드. '사랑의 여름'의 사운드."
+  },
+  {
+   "genre": "PSYCHEDELIC",
+   "title": "Purple Haze",
+   "artist": "The Jimi Hendrix Experience",
+   "year": 1967,
+   "intro": "피드백과 디스토션을 연주 기법으로 바꾼 기타 혁명가 지미 헨드릭스의 밴드."
+  },
+  {
+   "genre": "PSYCHEDELIC",
+   "title": "Venus in Furs",
+   "artist": "The Velvet Underground",
+   "year": 1967,
+   "intro": "당시엔 거의 팔리지 않았지만 이후 펑크·인디·얼터너티브 전체에 영향을 준 뉴욕 밴드."
+  },
+  {
+   "genre": "PSYCHEDELIC",
+   "title": "Sunshine of Your Love",
+   "artist": "Cream",
+   "year": 1967,
+   "intro": "블루스 연주력에 사이키델릭 사운드를 더한 에릭 클랩튼의 3인조."
+  },
+  {
+   "genre": "PSYCHEDELIC",
+   "title": "Truckin'",
+   "artist": "Grateful Dead",
+   "year": 1970,
+   "intro": "끝없이 이어지는 즉흥 공연과 팬 공동체로 사이키델릭의 정신을 이어 간 밴드."
+  },
+  {
+   "genre": "SOUTHERN_ROCK",
+   "title": "Sweet Home Alabama",
+   "artist": "Lynyrd Skynyrd",
+   "year": 1974,
+   "intro": "기타 세 대 편성으로 서던 록의 상징이 된 플로리다 밴드."
+  },
+  {
+   "genre": "SOUTHERN_ROCK",
+   "title": "Jessica",
+   "artist": "The Allman Brothers Band",
+   "year": 1973,
+   "intro": "블루스·재즈식 즉흥 연주를 록에 들여온 서던 록의 개척자."
+  },
+  {
+   "genre": "SOUTHERN_ROCK",
+   "title": "La Grange",
+   "artist": "ZZ Top",
+   "year": 1973,
+   "intro": "텍사스 블루스를 단단한 부기 리듬의 록으로 만든 3인조."
+  },
+  {
+   "genre": "SOUTHERN_ROCK",
+   "title": "Can't You See",
+   "artist": "The Marshall Tucker Band",
+   "year": 1973,
+   "intro": "컨트리와 재즈 요소를 섞은 사우스캐롤라이나 출신 서던 록 밴드."
+  },
+  {
+   "genre": "SOUTHERN_ROCK",
+   "title": "Green Grass and High Tides",
+   "artist": "Outlaws",
+   "year": 1975,
+   "intro": "여러 대의 기타가 길게 주고받는 연주로 서던 록의 '기타 군단' 전통을 이은 밴드."
+  },
+  {
+   "genre": "SOUTHERN_ROCK",
+   "title": "Jim Dandy",
+   "artist": "Black Oak Arkansas",
+   "year": 1973,
+   "intro": "거칠고 쇼맨십 강한 무대로 초기 서던 록을 이끈 아칸소 밴드."
+  },
+  {
+   "genre": "PROG",
+   "title": "21st Century Schizoid Man",
+   "artist": "King Crimson",
+   "year": 1969,
+   "intro": "재즈·클래식·헤비 사운드를 섞어 프로그레시브 록의 시작을 알린 밴드."
+  },
+  {
+   "genre": "PROG",
+   "title": "Roundabout",
+   "artist": "Yes",
+   "year": 1971,
+   "intro": "긴 곡 구성과 화려한 연주력으로 프로그레시브 록의 전형을 만든 밴드."
+  },
+  {
+   "genre": "PROG",
+   "title": "Time",
+   "artist": "Pink Floyd",
+   "year": 1973,
+   "intro": "콘셉트 앨범과 공간감 있는 사운드로 프로그레시브 록을 대중화한 밴드."
+  },
+  {
+   "genre": "PROG",
+   "title": "Firth of Fifth",
+   "artist": "Genesis",
+   "year": 1973,
+   "intro": "연극적인 무대와 복잡한 구성으로 영국 프로그레시브 록을 대표한 밴드."
+  },
+  {
+   "genre": "PROG",
+   "title": "Aqualung",
+   "artist": "Jethro Tull",
+   "year": 1971,
+   "intro": "플루트를 전면에 내세워 포크·블루스를 프로그레시브 록으로 엮은 밴드."
+  },
+  {
+   "genre": "PROG",
+   "title": "Tom Sawyer",
+   "artist": "Rush",
+   "year": 1981,
+   "intro": "3인조로 복잡한 연주와 SF 같은 가사를 펼친 캐나다 프로그레시브 록 밴드."
+  },
+  {
+   "genre": "GLAM",
+   "title": "Get It On",
+   "artist": "T. Rex",
+   "year": 1971,
+   "intro": "부기 리듬과 반짝이 의상으로 글램 록 붐을 일으킨 마크 볼란의 밴드."
+  },
+  {
+   "genre": "GLAM",
+   "title": "Starman",
+   "artist": "David Bowie",
+   "year": 1972,
+   "intro": "'지기 스타더스트'라는 캐릭터로 글램 록을 예술로 만든 변신의 아이콘."
+  },
+  {
+   "genre": "GLAM",
+   "title": "Virginia Plain",
+   "artist": "Roxy Music",
+   "year": 1972,
+   "intro": "아트 스쿨 감성과 신시사이저로 글램 록에 세련미를 더한 밴드."
+  },
+  {
+   "genre": "GLAM",
+   "title": "School's Out",
+   "artist": "Alice Cooper",
+   "year": 1972,
+   "intro": "공포 영화 같은 무대 연출로 '쇼크 록'을 만든 가수이자 밴드."
+  },
+  {
+   "genre": "GLAM",
+   "title": "Cum On Feel the Noize",
+   "artist": "Slade",
+   "year": 1973,
+   "intro": "일부러 틀린 철자의 곡명과 떼창으로 영국 글램 록 차트를 휩쓴 밴드."
+  },
+  {
+   "genre": "GLAM",
+   "title": "All the Young Dudes",
+   "artist": "Mott the Hoople",
+   "year": 1972,
+   "intro": "데이비드 보위가 준 곡으로 글램 록의 찬가를 남긴 밴드."
+  },
+  {
+   "genre": "HARD_ROCK",
+   "title": "Whole Lotta Love",
+   "artist": "Led Zeppelin",
+   "year": 1969,
+   "intro": "블루스를 거대한 음량과 리프로 키워 하드 록의 틀을 만든 밴드."
+  },
+  {
+   "genre": "HARD_ROCK",
+   "title": "Smoke on the Water",
+   "artist": "Deep Purple",
+   "year": 1972,
+   "intro": "오르간과 기타가 맞붙는 연주로 하드 록과 메탈 사이를 이은 밴드."
+  },
+  {
+   "genre": "HARD_ROCK",
+   "title": "Highway to Hell",
+   "artist": "AC/DC",
+   "year": 1979,
+   "intro": "단순하고 강렬한 리프 하나로 수십 년을 버틴 호주 하드 록 밴드."
+  },
+  {
+   "genre": "HARD_ROCK",
+   "title": "Dream On",
+   "artist": "Aerosmith",
+   "year": 1973,
+   "intro": "롤링 스톤즈식 블루스 록을 미국식 하드 록으로 만든 보스턴 밴드."
+  },
+  {
+   "genre": "HARD_ROCK",
+   "title": "Runnin' with the Devil",
+   "artist": "Van Halen",
+   "year": 1978,
+   "intro": "에디 밴 헤일런의 태핑 기타로 80년대 하드 록 기타의 기준을 바꾼 밴드."
+  },
+  {
+   "genre": "HARD_ROCK",
+   "title": "Sweet Child o' Mine",
+   "artist": "Guns N' Roses",
+   "year": 1987,
+   "intro": "80년대 말 거칠고 위험한 하드 록을 되살린 LA 밴드."
+  },
+  {
+   "genre": "HEAVY_METAL",
+   "title": "Paranoid",
+   "artist": "Black Sabbath",
+   "year": 1970,
+   "intro": "무겁고 어두운 리프로 헤비메탈이라는 장르 자체를 만든 밴드."
+  },
+  {
+   "genre": "HEAVY_METAL",
+   "title": "Breaking the Law",
+   "artist": "Judas Priest",
+   "year": 1980,
+   "intro": "트윈 기타와 가죽 의상으로 메탈의 사운드와 이미지를 확립한 밴드."
+  },
+  {
+   "genre": "HEAVY_METAL",
+   "title": "The Trooper",
+   "artist": "Iron Maiden",
+   "year": 1983,
+   "intro": "빠른 트윈 기타 멜로디로 '뉴 웨이브 오브 브리티시 헤비메탈'을 이끈 밴드."
+  },
+  {
+   "genre": "HEAVY_METAL",
+   "title": "Master of Puppets",
+   "artist": "Metallica",
+   "year": 1986,
+   "intro": "메탈을 더 빠르고 공격적으로 밀어붙인 스래시 메탈의 대표 밴드."
+  },
+  {
+   "genre": "HEAVY_METAL",
+   "title": "Ace of Spades",
+   "artist": "Motörhead",
+   "year": 1980,
+   "intro": "펑크의 속도를 메탈에 끌어들여 스래시 메탈의 길을 연 밴드."
+  },
+  {
+   "genre": "HEAVY_METAL",
+   "title": "Angel of Death",
+   "artist": "Slayer",
+   "year": 1986,
+   "intro": "극단적인 속도와 공격성으로 스래시 메탈의 한계를 밀어붙인 밴드."
+  },
+  {
+   "genre": "PUNK",
+   "title": "Blitzkrieg Bop",
+   "artist": "Ramones",
+   "year": 1976,
+   "intro": "짧고 빠른 세 코드 곡으로 펑크의 공식을 만든 뉴욕 밴드."
+  },
+  {
+   "genre": "PUNK",
+   "title": "Anarchy in the U.K.",
+   "artist": "Sex Pistols",
+   "year": 1976,
+   "intro": "짧은 활동 기간에 영국 사회를 뒤흔든 펑크의 상징."
+  },
+  {
+   "genre": "PUNK",
+   "title": "London Calling",
+   "artist": "The Clash",
+   "year": 1979,
+   "intro": "펑크에 레게·로커빌리·정치적 메시지를 더해 장르를 넓힌 런던 밴드."
+  },
+  {
+   "genre": "PUNK",
+   "title": "Ever Fallen in Love (With Someone You Shouldn't've)",
+   "artist": "Buzzcocks",
+   "year": 1978,
+   "intro": "펑크의 속도에 팝 멜로디를 입혀 팝 펑크의 원형을 만든 맨체스터 밴드."
+  },
+  {
+   "genre": "PUNK",
+   "title": "Gloria",
+   "artist": "Patti Smith",
+   "year": 1975,
+   "intro": "시와 록을 결합해 뉴욕 펑크의 예술적 출발점이 된 시인이자 가수."
+  },
+  {
+   "genre": "PUNK",
+   "title": "New Rose",
+   "artist": "The Damned",
+   "year": 1976,
+   "intro": "영국 최초의 펑크 싱글을 낸 밴드."
+  },
+  {
+   "genre": "NEW_WAVE",
+   "title": "Pump It Up",
+   "artist": "Elvis Costello",
+   "year": 1978,
+   "intro": "펑크의 날카로움에 정교한 작곡을 더한 싱어송라이터."
+  },
+  {
+   "genre": "NEW_WAVE",
+   "title": "Heart of Glass",
+   "artist": "Blondie",
+   "year": 1979,
+   "intro": "펑크 클럽 출신으로 디스코·팝을 섞어 뉴 웨이브를 차트 정상에 올린 밴드."
+  },
+  {
+   "genre": "NEW_WAVE",
+   "title": "Once in a Lifetime",
+   "artist": "Talking Heads",
+   "year": 1980,
+   "intro": "펑크의 태도에 펑크(Funk) 리듬과 지적인 실험을 더한 뉴욕 밴드."
+  },
+  {
+   "genre": "NEW_WAVE",
+   "title": "Roxanne",
+   "artist": "The Police",
+   "year": 1978,
+   "intro": "레게 리듬을 펑크·팝과 섞은 3인조 밴드."
+  },
+  {
+   "genre": "NEW_WAVE",
+   "title": "Whip It",
+   "artist": "Devo",
+   "year": 1980,
+   "intro": "기계적인 리듬과 풍자로 '인간의 퇴화'를 노래한 실험적인 밴드."
+  },
+  {
+   "genre": "NEW_WAVE",
+   "title": "Just What I Needed",
+   "artist": "The Cars",
+   "year": 1978,
+   "intro": "신시사이저와 간결한 기타 팝으로 미국 뉴 웨이브를 라디오에 올린 밴드."
+  },
+  {
+   "genre": "GRUNGE",
+   "title": "Smells Like Teen Spirit",
+   "artist": "Nirvana",
+   "year": 1991,
+   "intro": "'Smells Like Teen Spirit' 한 곡으로 그런지를 주류로 끌어올린 시애틀 밴드."
+  },
+  {
+   "genre": "GRUNGE",
+   "title": "Alive",
+   "artist": "Pearl Jam",
+   "year": 1991,
+   "intro": "클래식 록의 무게감을 지닌 그런지 밴드. 시애틀 사운드의 또 다른 축."
+  },
+  {
+   "genre": "GRUNGE",
+   "title": "Black Hole Sun",
+   "artist": "Soundgarden",
+   "year": 1994,
+   "intro": "메탈에 가까운 무거운 리프로 그런지를 먼저 시작한 시애틀 밴드 중 하나."
+  },
+  {
+   "genre": "GRUNGE",
+   "title": "Man in the Box",
+   "artist": "Alice in Chains",
+   "year": 1990,
+   "intro": "어두운 화음과 둔중한 리프로 메탈 쪽 그런지를 대표한 밴드."
+  },
+  {
+   "genre": "GRUNGE",
+   "title": "Touch Me I'm Sick",
+   "artist": "Mudhoney",
+   "year": 1988,
+   "intro": "서브 팝 레이블 초창기의 대표로 그런지의 거친 소리를 먼저 만든 밴드."
+  },
+  {
+   "genre": "GRUNGE",
+   "title": "Plush",
+   "artist": "Stone Temple Pilots",
+   "year": 1992,
+   "intro": "그런지 붐 속에서 대중적인 멜로디로 큰 성공을 거둔 샌디에이고 밴드."
+  },
+  {
+   "genre": "HARDCORE",
+   "title": "Holiday in Cambodia",
+   "artist": "Dead Kennedys",
+   "year": 1980,
+   "intro": "풍자적인 가사로 샌프란시스코 하드코어를 대표한 밴드."
+  },
+  {
+   "genre": "HARDCORE",
+   "title": "Rise Above",
+   "artist": "Black Flag",
+   "year": 1981,
+   "intro": "쉼 없는 투어와 자체 레이블로 미국 하드코어의 DIY 문화를 만든 밴드."
+  },
+  {
+   "genre": "HARDCORE",
+   "title": "Minor Threat",
+   "artist": "Minor Threat",
+   "year": 1981,
+   "intro": "워싱턴 D.C. 하드코어의 상징. '스트레이트 엣지' 문화의 출발점."
+  },
+  {
+   "genre": "HARDCORE",
+   "title": "Banned in D.C.",
+   "artist": "Bad Brains",
+   "year": 1982,
+   "intro": "레게와 하드코어를 넘나드는 초고속 연주로 장르의 기준을 높인 밴드."
+  },
+  {
+   "genre": "HARDCORE",
+   "title": "Suburban Home",
+   "artist": "Descendents",
+   "year": 1982,
+   "intro": "하드코어의 속도에 멜로디를 입혀 팝 펑크의 뿌리가 된 밴드."
+  },
+  {
+   "genre": "HARDCORE",
+   "title": "Waiting Room",
+   "artist": "Fugazi",
+   "year": 1988,
+   "intro": "마이너 스렛 멤버가 만든 밴드로 하드코어를 더 실험적인 방향으로 넓혔다."
+  },
+  {
+   "genre": "FUNK",
+   "title": "Thank You (Falettinme Be Mice Elf Agin)",
+   "artist": "Sly & the Family Stone",
+   "year": 1969,
+   "intro": "인종과 성별이 섞인 밴드로 사이키델릭과 펑크(Funk)를 합친 선구자."
+  },
+  {
+   "genre": "FUNK",
+   "title": "Get Up (I Feel Like Being a) Sex Machine",
+   "artist": "James Brown",
+   "year": 1970,
+   "intro": "모든 악기를 리듬 악기처럼 쓰는 그루브로 펑크(Funk)를 발명한 인물."
+  },
+  {
+   "genre": "FUNK",
+   "title": "Give Up the Funk (Tear the Roof off the Sucker)",
+   "artist": "Parliament",
+   "year": 1976,
+   "intro": "조지 클린턴이 이끈 P-Funk 집단. 우주적인 콘셉트와 무거운 베이스 그루브."
+  },
+  {
+   "genre": "FUNK",
+   "title": "Kiss",
+   "artist": "Prince",
+   "year": 1986,
+   "intro": "펑크(Funk)·록·팝을 혼자 연주하고 만들어 80년대 사운드를 새로 쓴 음악가."
+  },
+  {
+   "genre": "FUNK",
+   "title": "September",
+   "artist": "Earth, Wind & Fire",
+   "year": 1978,
+   "intro": "브라스와 화음으로 펑크(Funk)를 화려한 대편성 사운드로 키운 밴드."
+  },
+  {
+   "genre": "FUNK",
+   "title": "Jungle Boogie",
+   "artist": "Kool & the Gang",
+   "year": 1973,
+   "intro": "재즈 밴드 출신다운 탄탄한 연주로 펑크(Funk)와 디스코를 오간 밴드."
+  },
+  {
+   "genre": "DISCO",
+   "title": "Stayin' Alive",
+   "artist": "Bee Gees",
+   "year": 1977,
+   "intro": "팔세토 화음과 영화 '토요일 밤의 열기'로 디스코 붐의 정점을 찍은 형제 그룹."
+  },
+  {
+   "genre": "DISCO",
+   "title": "I Feel Love",
+   "artist": "Donna Summer",
+   "year": 1977,
+   "intro": "'디스코의 여왕'. 'I Feel Love'로 전자 댄스 음악의 미래를 보여 줌."
+  },
+  {
+   "genre": "DISCO",
+   "title": "Le Freak",
+   "artist": "Chic",
+   "year": 1978,
+   "intro": "나일 로저스의 기타 커팅과 버나드 에드워즈의 베이스로 세련된 디스코를 만든 밴드."
+  },
+  {
+   "genre": "DISCO",
+   "title": "I Will Survive",
+   "artist": "Gloria Gaynor",
+   "year": 1978,
+   "intro": "'I Will Survive'로 디스코의 대표 찬가를 남긴 가수."
+  },
+  {
+   "genre": "DISCO",
+   "title": "Get Down Tonight",
+   "artist": "KC and the Sunshine Band",
+   "year": 1975,
+   "intro": "마이애미 사운드로 디스코를 대중 댄스 음악으로 만든 밴드."
+  },
+  {
+   "genre": "DISCO",
+   "title": "Y.M.C.A.",
+   "artist": "Village People",
+   "year": 1978,
+   "intro": "캐릭터 의상과 떼창으로 디스코 붐의 상징이 된 그룹."
+  },
+  {
+   "genre": "HIP_HOP",
+   "title": "Rapper's Delight",
+   "artist": "The Sugarhill Gang",
+   "year": 1979,
+   "intro": "'Rapper's Delight'로 힙합을 처음 대중 히트로 만든 그룹."
+  },
+  {
+   "genre": "HIP_HOP",
+   "title": "The Message",
+   "artist": "Grandmaster Flash and the Furious Five",
+   "year": 1982,
+   "intro": "DJ 기술을 발전시키고 'The Message'로 거리의 현실을 랩에 담은 그룹."
+  },
+  {
+   "genre": "HIP_HOP",
+   "title": "Walk This Way",
+   "artist": "Run-DMC",
+   "year": 1986,
+   "intro": "록 기타와 거리 패션으로 힙합을 주류로 끌어낸 퀸스 출신 그룹."
+  },
+  {
+   "genre": "HIP_HOP",
+   "title": "Fight the Power",
+   "artist": "Public Enemy",
+   "year": 1989,
+   "intro": "강한 정치적 메시지와 촘촘한 샘플링으로 힙합의 힘을 보여 준 그룹."
+  },
+  {
+   "genre": "HIP_HOP",
+   "title": "Rock the Bells",
+   "artist": "LL Cool J",
+   "year": 1985,
+   "intro": "데프 잼의 첫 스타. 솔로 래퍼의 자신감을 힙합의 기본값으로 만든 인물."
+  },
+  {
+   "genre": "HIP_HOP",
+   "title": "Straight Outta Compton",
+   "artist": "N.W.A",
+   "year": 1988,
+   "intro": "갱스터 랩을 전국적인 현상으로 만든 컴턴 출신 그룹."
+  },
+  {
+   "genre": "INDIE",
+   "title": "This Charming Man",
+   "artist": "The Smiths",
+   "year": 1983,
+   "intro": "찰랑이는 기타와 문학적인 가사로 영국 인디 록의 기준이 된 밴드."
+  },
+  {
+   "genre": "INDIE",
+   "title": "Where Is My Mind?",
+   "artist": "Pixies",
+   "year": 1988,
+   "intro": "조용하게 시작해 폭발하는 곡 구성으로 너바나 등 얼터너티브 세대에 영향을 준 밴드."
+  },
+  {
+   "genre": "INDIE",
+   "title": "I Wanna Be Adored",
+   "artist": "The Stone Roses",
+   "year": 1989,
+   "intro": "인디 기타와 댄스 리듬을 섞어 '매드체스터'를 이끌고 브릿팝의 길을 연 밴드."
+  },
+  {
+   "genre": "INDIE",
+   "title": "Radio Free Europe",
+   "artist": "R.E.M.",
+   "year": 1981,
+   "intro": "대학 라디오와 인디 레이블에서 출발해 미국 인디 록의 모델이 된 밴드."
+  },
+  {
+   "genre": "INDIE",
+   "title": "Bastards of Young",
+   "artist": "The Replacements",
+   "year": 1985,
+   "intro": "거친 연주와 진심 어린 가사로 미국 인디 록의 원형이 된 미니애폴리스 밴드."
+  },
+  {
+   "genre": "INDIE",
+   "title": "Makes No Sense at All",
+   "artist": "Hüsker Dü",
+   "year": 1985,
+   "intro": "하드코어의 속도에 멜로디를 더해 얼터너티브 록으로 가는 길을 연 3인조."
+  },
+  {
+   "genre": "BRITPOP",
+   "title": "Wonderwall",
+   "artist": "Oasis",
+   "year": 1995,
+   "intro": "비틀즈를 계승한 멜로디와 자신감으로 브릿팝 최대의 히트를 만든 맨체스터 밴드."
+  },
+  {
+   "genre": "BRITPOP",
+   "title": "Parklife",
+   "artist": "Blur",
+   "year": 1994,
+   "intro": "영국의 일상을 풍자한 가사로 오아시스와 브릿팝 라이벌 구도를 만든 런던 밴드."
+  },
+  {
+   "genre": "BRITPOP",
+   "title": "Common People",
+   "artist": "Pulp",
+   "year": 1995,
+   "intro": "계급과 일상을 날카롭게 관찰한 가사로 브릿팝의 지성을 대표한 밴드."
+  },
+  {
+   "genre": "BRITPOP",
+   "title": "Animal Nitrate",
+   "artist": "Suede",
+   "year": 1993,
+   "intro": "글램 록의 퇴폐미를 되살려 브릿팝 붐의 첫 신호탄을 쏜 밴드."
+  },
+  {
+   "genre": "BRITPOP",
+   "title": "Alright",
+   "artist": "Supergrass",
+   "year": 1995,
+   "intro": "10대의 활기를 담은 'Alright'로 브릿팝의 밝은 면을 대표한 밴드."
+  },
+  {
+   "genre": "BRITPOP",
+   "title": "Connection",
+   "artist": "Elastica",
+   "year": 1994,
+   "intro": "펑크와 뉴 웨이브를 날카롭게 줄인 곡으로 브릿팝 붐을 함께 이끈 밴드."
+  },
+  {
+   "genre": "POST_BRITPOP",
+   "title": "Why Does It Always Rain on Me?",
+   "artist": "Travis",
+   "year": 1999,
+   "intro": "브릿팝의 허세 대신 담백한 멜로디로 포스트 브릿팝의 흐름을 만든 스코틀랜드 밴드."
+  },
+  {
+   "genre": "POST_BRITPOP",
+   "title": "Yellow",
+   "artist": "Coldplay",
+   "year": 2000,
+   "intro": "서정적인 피아노와 기타로 포스트 브릿팝을 세계적인 규모로 키운 밴드."
+  },
+  {
+   "genre": "POST_BRITPOP",
+   "title": "Somewhere Only We Know",
+   "artist": "Keane",
+   "year": 2004,
+   "intro": "기타 없이 피아노 중심으로 포스트 브릿팝을 연주한 밴드."
+  },
+  {
+   "genre": "POST_BRITPOP",
+   "title": "There Goes the Fear",
+   "artist": "Doves",
+   "year": 2002,
+   "intro": "넓은 공간감의 사운드로 맨체스터 밴드의 전통을 이은 3인조."
+  },
+  {
+   "genre": "POST_BRITPOP",
+   "title": "Chasing Cars",
+   "artist": "Snow Patrol",
+   "year": 2006,
+   "intro": "잔잔하게 쌓아 올리는 곡으로 포스트 브릿팝을 대중적으로 만든 밴드."
+  },
+  {
+   "genre": "POST_BRITPOP",
+   "title": "One Day Like This",
+   "artist": "Elbow",
+   "year": 2008,
+   "intro": "서정적인 가사와 웅장한 편곡으로 맨체스터 계열 포스트 브릿팝을 이은 밴드."
+  },
+  {
+   "genre": "ALT_ROCK",
+   "title": "Teen Age Riot",
+   "artist": "Sonic Youth",
+   "year": 1988,
+   "intro": "변칙 튜닝과 노이즈로 얼터너티브 록의 실험 정신을 대표한 뉴욕 밴드."
+  },
+  {
+   "genre": "ALT_ROCK",
+   "title": "Losing My Religion",
+   "artist": "R.E.M.",
+   "year": 1991,
+   "intro": "'Losing My Religion'으로 얼터너티브 록을 세계적인 히트로 만든 밴드."
+  },
+  {
+   "genre": "ALT_ROCK",
+   "title": "Creep",
+   "artist": "Radiohead",
+   "year": 1992,
+   "intro": "'Creep'으로 시작해 앨범마다 록의 경계를 넓혀 온 영국 밴드."
+  },
+  {
+   "genre": "ALT_ROCK",
+   "title": "Been Caught Stealing",
+   "artist": "Jane's Addiction",
+   "year": 1990,
+   "intro": "메탈·펑크·사이키델릭을 섞고 롤라팔루자 페스티벌을 만든 LA 밴드."
+  },
+  {
+   "genre": "ALT_ROCK",
+   "title": "1979",
+   "artist": "The Smashing Pumpkins",
+   "year": 1996,
+   "intro": "몽환적인 기타 벽과 대규모 앨범으로 90년대 얼터너티브를 대표한 시카고 밴드."
+  },
+  {
+   "genre": "ALT_ROCK",
+   "title": "Under the Bridge",
+   "artist": "Red Hot Chili Peppers",
+   "year": 1991,
+   "intro": "펑크(Funk) 베이스와 록을 섞어 얼터너티브의 폭을 넓힌 LA 밴드."
+  },
+  {
+   "genre": "SWING",
+   "title": "Sing, Sing, Sing (With a Swing)",
+   "artist": "Benny Goodman",
+   "year": 1937,
+   "intro": "'스윙의 왕'. 카네기 홀 공연으로 재즈를 정식 무대에 올린 클라리넷 연주자."
+  },
+  {
+   "genre": "SWING",
+   "title": "One O'Clock Jump",
+   "artist": "Count Basie",
+   "year": 1937,
+   "intro": "간결한 피아노와 탄탄한 리듬 섹션으로 캔자스시티 스윙을 대표한 밴드 리더."
+  },
+  {
+   "genre": "SWING",
+   "title": "In the Mood",
+   "artist": "Glenn Miller",
+   "year": 1939,
+   "intro": "매끄러운 편곡으로 스윙을 가장 대중적인 댄스 음악으로 만든 밴드 리더."
+  },
+  {
+   "genre": "SWING",
+   "title": "A-Tisket, A-Tasket",
+   "artist": "Ella Fitzgerald",
+   "year": 1938,
+   "intro": "맑은 음색과 즉흥 스캣으로 스윙 시대 최고의 보컬로 꼽힌 가수."
+  },
+  {
+   "genre": "BEBOP",
+   "title": "Ko-Ko",
+   "artist": "Charlie Parker",
+   "year": 1945,
+   "intro": "'버드'. 번개 같은 알토 색소폰 즉흥으로 비밥의 언어를 만든 인물."
+  },
+  {
+   "genre": "BEBOP",
+   "title": "Salt Peanuts",
+   "artist": "Dizzy Gillespie",
+   "year": 1945,
+   "intro": "파커와 함께 비밥을 만든 트럼펫 연주자. 라틴 리듬도 재즈에 들여왔다."
+  },
+  {
+   "genre": "BEBOP",
+   "title": "'Round Midnight",
+   "artist": "Thelonious Monk",
+   "year": 1947,
+   "intro": "엇나가는 듯한 화음과 독특한 피아노로 비밥에 가장 개성 있는 곡들을 남긴 인물."
+  },
+  {
+   "genre": "BEBOP",
+   "title": "Un Poco Loco",
+   "artist": "Bud Powell",
+   "year": 1951,
+   "intro": "관악기 같은 오른손 선율로 비밥 피아노의 표준을 만든 연주자."
+  },
+  {
+   "genre": "COOL_JAZZ",
+   "title": "My Funny Valentine",
+   "artist": "Chet Baker",
+   "year": 1954,
+   "intro": "담담한 트럼펫과 속삭이는 보컬로 쿨 재즈의 얼굴이 된 연주자."
+  },
+  {
+   "genre": "COOL_JAZZ",
+   "title": "Walkin' Shoes",
+   "artist": "Gerry Mulligan",
+   "year": 1952,
+   "intro": "피아노 없는 4인조와 바리톤 색소폰으로 웨스트코스트 쿨 재즈를 이끈 인물."
+  },
+  {
+   "genre": "COOL_JAZZ",
+   "title": "Desafinado",
+   "artist": "Stan Getz",
+   "year": 1962,
+   "intro": "부드러운 테너 색소폰으로 쿨 재즈를 대표하고 보사노바를 세계에 알린 연주자."
+  },
+  {
+   "genre": "COOL_JAZZ",
+   "title": "Django",
+   "artist": "The Modern Jazz Quartet",
+   "year": 1955,
+   "intro": "클래식의 형식미를 재즈에 들여온 정갈한 4인조."
+  },
+  {
+   "genre": "HARD_BOP",
+   "title": "Moanin'",
+   "artist": "Art Blakey & The Jazz Messengers",
+   "year": 1958,
+   "intro": "수많은 젊은 연주자를 길러 낸 '하드 밥 학교' 같은 밴드."
+  },
+  {
+   "genre": "HARD_BOP",
+   "title": "Song for My Father",
+   "artist": "Horace Silver",
+   "year": 1965,
+   "intro": "가스펠·블루스 느낌의 피아노와 작곡으로 하드 밥의 색을 정한 인물."
+  },
+  {
+   "genre": "HARD_BOP",
+   "title": "Mercy, Mercy, Mercy",
+   "artist": "Cannonball Adderley",
+   "year": 1966,
+   "intro": "흥겨운 알토 색소폰으로 하드 밥을 소울 재즈 히트로 이어 간 연주자."
+  },
+  {
+   "genre": "HARD_BOP",
+   "title": "St. Thomas",
+   "artist": "Sonny Rollins",
+   "year": 1956,
+   "intro": "거침없는 테너 색소폰 즉흥으로 하드 밥 시대의 거인이 된 연주자."
+  },
+  {
+   "genre": "FREE_JAZZ",
+   "title": "Lonely Woman",
+   "artist": "Ornette Coleman",
+   "year": 1959,
+   "intro": "코드 진행 없이 즉흥하는 방식으로 '프리 재즈'라는 이름 자체를 만든 색소폰 연주자."
+  },
+  {
+   "genre": "FREE_JAZZ",
+   "title": "A Love Supreme, Part I: Acknowledgement",
+   "artist": "John Coltrane",
+   "year": 1965,
+   "intro": "후기의 영적인 연주로 프리 재즈 쪽 문을 활짝 연 색소폰 연주자."
+  },
+  {
+   "genre": "FREE_JAZZ",
+   "title": "Ghosts",
+   "artist": "Albert Ayler",
+   "year": 1964,
+   "intro": "행진곡과 영가를 비명 같은 색소폰으로 뒤틀어 프리 재즈의 극단을 보여 준 인물."
+  },
+  {
+   "genre": "FREE_JAZZ",
+   "title": "Space Is the Place",
+   "artist": "Sun Ra",
+   "year": 1973,
+   "intro": "우주적인 콘셉트와 대편성 즉흥으로 프리 재즈를 퍼포먼스로 만든 밴드 리더."
+  },
+  {
+   "genre": "JAZZ_FUSION",
+   "title": "Bitches Brew",
+   "artist": "Miles Davis",
+   "year": 1970,
+   "intro": "'Bitches Brew'로 전기 악기와 록 리듬을 들여와 퓨전 시대를 연 트럼펫 연주자."
+  },
+  {
+   "genre": "JAZZ_FUSION",
+   "title": "Chameleon",
+   "artist": "Herbie Hancock",
+   "year": 1973,
+   "intro": "신시사이저와 펑크(Funk) 그루브로 퓨전을 대중적인 히트로 만든 피아니스트."
+  },
+  {
+   "genre": "JAZZ_FUSION",
+   "title": "Birdland",
+   "artist": "Weather Report",
+   "year": 1977,
+   "intro": "자코 패스토리어스의 베이스와 신시사이저로 퓨전의 대표 밴드가 된 그룹."
+  },
+  {
+   "genre": "JAZZ_FUSION",
+   "title": "Birds of Fire",
+   "artist": "Mahavishnu Orchestra",
+   "year": 1973,
+   "intro": "존 맥래플린의 초고속 기타와 인도 음악의 영향으로 퓨전의 강렬한 쪽을 이끈 밴드."
+  },
+  {
+   "genre": "ELECTRONIC",
+   "title": "Autobahn",
+   "artist": "Kraftwerk",
+   "year": 1974,
+   "intro": "로봇 같은 목소리와 신시사이저로 전자음악의 청사진을 그린 독일 밴드. 테크노·신스팝·힙합 모두의 조상."
+  },
+  {
+   "genre": "ELECTRONIC",
+   "title": "Phaedra",
+   "artist": "Tangerine Dream",
+   "year": 1974,
+   "intro": "시퀀서로 반복되는 신시사이저 패턴을 음악의 뼈대로 만든 '베를린 스쿨'의 대표."
+  },
+  {
+   "genre": "ELECTRONIC",
+   "title": "Oxygène (Part IV)",
+   "artist": "Jean-Michel Jarre",
+   "year": 1976,
+   "intro": "멜로디 있는 신시사이저 곡과 대형 야외 공연으로 전자음악을 대중에게 알린 프랑스 음악가."
+  },
+  {
+   "genre": "ELECTRONIC",
+   "title": "Chase",
+   "artist": "Giorgio Moroder",
+   "year": 1978,
+   "intro": "도나 서머의 'I Feel Love'를 만든 프로듀서. 신시사이저 베이스로 디스코와 전자음악을 이었다."
+  },
+  {
+   "genre": "SYNTH_POP",
+   "title": "Enjoy the Silence",
+   "artist": "Depeche Mode",
+   "year": 1990,
+   "intro": "어두운 신시사이저 사운드로 신스팝을 경기장 규모로 키운 영국 밴드."
+  },
+  {
+   "genre": "SYNTH_POP",
+   "title": "Blue Monday",
+   "artist": "New Order",
+   "year": 1983,
+   "intro": "조이 디비전 멤버들이 결성해 록과 댄스 전자음악을 이은 맨체스터 밴드."
+  },
+  {
+   "genre": "SYNTH_POP",
+   "title": "West End Girls",
+   "artist": "Pet Shop Boys",
+   "year": 1985,
+   "intro": "재치 있는 가사와 세련된 전자 팝으로 신스팝을 대표한 2인조."
+  },
+  {
+   "genre": "SYNTH_POP",
+   "title": "Sweet Dreams (Are Made of This)",
+   "artist": "Eurythmics",
+   "year": 1983,
+   "intro": "애니 레녹스의 강렬한 보컬과 차가운 신시사이저가 만난 듀오."
+  },
+  {
+   "genre": "HOUSE",
+   "title": "Your Love",
+   "artist": "Frankie Knuckles",
+   "year": 1987,
+   "intro": "'하우스의 대부'. 시카고 클럽 웨어하우스에서 하우스라는 이름이 나오게 한 DJ."
+  },
+  {
+   "genre": "HOUSE",
+   "title": "Move Your Body",
+   "artist": "Marshall Jefferson",
+   "year": 1986,
+   "intro": "피아노 리프를 앞세운 '하우스 음악 찬가'를 만든 프로듀서."
+  },
+  {
+   "genre": "HOUSE",
+   "title": "Can You Feel It",
+   "artist": "Mr. Fingers",
+   "year": 1986,
+   "intro": "깊고 따뜻한 신시사이저로 '딥 하우스'의 원형을 만든 래리 허드의 이름."
+  },
+  {
+   "genre": "HOUSE",
+   "title": "Around the World",
+   "artist": "Daft Punk",
+   "year": 1997,
+   "intro": "하우스를 로봇 헬멧과 필터 사운드로 재해석해 전 세계에 알린 프랑스 듀오."
+  },
+  {
+   "genre": "TECHNO",
+   "title": "No UFO's",
+   "artist": "Model 500",
+   "year": 1985,
+   "intro": "후안 앳킨스의 프로젝트. 디트로이트 테크노의 출발점이 된 곡들을 남겼다."
+  },
+  {
+   "genre": "TECHNO",
+   "title": "Strings of Life",
+   "artist": "Rhythim Is Rhythim",
+   "year": 1987,
+   "intro": "데릭 메이의 프로젝트. 현악 같은 신시사이저로 테크노에 감정을 불어넣었다."
+  },
+  {
+   "genre": "TECHNO",
+   "title": "Good Life",
+   "artist": "Inner City",
+   "year": 1988,
+   "intro": "케빈 손더슨의 그룹. 디트로이트 테크노를 영국 차트까지 올린 팝 쪽 얼굴."
+  },
+  {
+   "genre": "TECHNO",
+   "title": "The Bells",
+   "artist": "Jeff Mills",
+   "year": 1997,
+   "intro": "빠른 손놀림의 DJ 플레이와 미니멀한 곡으로 테크노를 극한까지 밀어붙인 디트로이트 출신 음악가."
+  },
+  {
+   "genre": "DRUM_AND_BASS",
+   "title": "Inner City Life",
+   "artist": "Goldie",
+   "year": 1994,
+   "intro": "정글·드럼 앤 베이스를 앨범 단위의 예술로 끌어올린 영국 음악가."
+  },
+  {
+   "genre": "DRUM_AND_BASS",
+   "title": "Brown Paper Bag",
+   "artist": "Roni Size",
+   "year": 1997,
+   "intro": "라이브 연주를 더해 드럼 앤 베이스에 재즈의 질감을 입힌 브리스틀 음악가."
+  },
+  {
+   "genre": "DRUM_AND_BASS",
+   "title": "Horizons",
+   "artist": "LTJ Bukem",
+   "year": 1995,
+   "intro": "부드러운 재즈·앰비언트 질감으로 '리퀴드' 드럼 앤 베이스의 길을 연 DJ."
+  },
+  {
+   "genre": "DRUM_AND_BASS",
+   "title": "Tarantula",
+   "artist": "Pendulum",
+   "year": 2005,
+   "intro": "록 밴드 편성과 드럼 앤 베이스를 섞어 장르를 대형 무대로 가져간 호주 출신 그룹."
+  },
+  {
+   "genre": "TRIP_HOP",
+   "title": "Teardrop",
+   "artist": "Massive Attack",
+   "year": 1998,
+   "intro": "브리스틀의 사운드 시스템 문화에서 나와 트립합을 정의한 집단."
+  },
+  {
+   "genre": "TRIP_HOP",
+   "title": "Glory Box",
+   "artist": "Portishead",
+   "year": 1994,
+   "intro": "옛 영화 음악 같은 샘플과 쓸쓸한 보컬로 트립합의 대표작을 만든 밴드."
+  },
+  {
+   "genre": "TRIP_HOP",
+   "title": "Overcome",
+   "artist": "Tricky",
+   "year": 1995,
+   "intro": "매시브 어택 출신으로 더 어둡고 불안한 트립합을 만든 음악가."
+  },
+  {
+   "genre": "TRIP_HOP",
+   "title": "Midnight in a Perfect World",
+   "artist": "DJ Shadow",
+   "year": 1996,
+   "intro": "샘플만으로 앨범 전체를 만든 미국 DJ. 트립합과 연주곡 중심 힙합을 이었다."
+  },
+  {
+   "genre": "EAST_COAST",
+   "title": "Juicy",
+   "artist": "The Notorious B.I.G.",
+   "year": 1994,
+   "intro": "느긋하면서도 정교한 랩으로 90년대 뉴욕 힙합을 대표한 래퍼."
+  },
+  {
+   "genre": "EAST_COAST",
+   "title": "N.Y. State of Mind",
+   "artist": "Nas",
+   "year": 1994,
+   "intro": "첫 앨범 'Illmatic'으로 가사의 문학성을 한 단계 끌어올린 퀸스 출신 래퍼."
+  },
+  {
+   "genre": "EAST_COAST",
+   "title": "C.R.E.A.M.",
+   "artist": "Wu-Tang Clan",
+   "year": 1993,
+   "intro": "무협 영화 샘플과 거친 비트로 독특한 세계관을 만든 스태튼 아일랜드 집단."
+  },
+  {
+   "genre": "EAST_COAST",
+   "title": "Shook Ones, Pt. II",
+   "artist": "Mobb Deep",
+   "year": 1995,
+   "intro": "차갑고 음산한 비트로 퀸스 거리의 긴장감을 그린 2인조."
+  },
+  {
+   "genre": "G_FUNK",
+   "title": "Nuthin' but a 'G' Thang",
+   "artist": "Dr. Dre",
+   "year": 1992,
+   "intro": "'The Chronic'으로 지펑크 사운드를 만든 프로듀서이자 래퍼."
+  },
+  {
+   "genre": "G_FUNK",
+   "title": "Gin and Juice",
+   "artist": "Snoop Dogg",
+   "year": 1993,
+   "intro": "느긋한 발성으로 지펑크의 얼굴이 된 롱비치 출신 래퍼."
+  },
+  {
+   "genre": "G_FUNK",
+   "title": "California Love",
+   "artist": "2Pac",
+   "year": 1995,
+   "intro": "감정적인 랩과 서부 해안의 자부심으로 90년대 힙합의 상징이 된 래퍼."
+  },
+  {
+   "genre": "G_FUNK",
+   "title": "Regulate",
+   "artist": "Warren G",
+   "year": 1994,
+   "intro": "네이트 독과 함께 부드러운 지펑크 히트를 만든 프로듀서이자 래퍼."
+  },
+  {
+   "genre": "SOUTHERN_HIP_HOP",
+   "title": "Ms. Jackson",
+   "artist": "OutKast",
+   "year": 2000,
+   "intro": "애틀랜타 출신 2인조. 펑크(Funk)와 실험 정신으로 남부 힙합의 존재감을 증명했다."
+  },
+  {
+   "genre": "SOUTHERN_HIP_HOP",
+   "title": "Mind Playing Tricks on Me",
+   "artist": "Geto Boys",
+   "year": 1991,
+   "intro": "휴스턴 출신 그룹. 남부 힙합이 전국에 알려진 계기를 만들었다."
+  },
+  {
+   "genre": "SOUTHERN_HIP_HOP",
+   "title": "Int'l Players Anthem (I Choose You)",
+   "artist": "UGK",
+   "year": 2007,
+   "intro": "텍사스 포트아서 출신 2인조. 느린 템포의 남부 힙합 문법을 만든 선구자."
+  },
+  {
+   "genre": "SOUTHERN_HIP_HOP",
+   "title": "Stay Fly",
+   "artist": "Three 6 Mafia",
+   "year": 2005,
+   "intro": "멤피스 출신 그룹. 어두운 비트와 반복 구절로 트랩의 뿌리가 된 소리를 만들었다."
+  },
+  {
+   "genre": "JAZZ_RAP",
+   "title": "Can I Kick It?",
+   "artist": "A Tribe Called Quest",
+   "year": 1990,
+   "intro": "재즈 베이스 라인 샘플과 대화 같은 랩으로 재즈 랩의 기준을 세운 그룹."
+  },
+  {
+   "genre": "JAZZ_RAP",
+   "title": "Me Myself and I",
+   "artist": "De La Soul",
+   "year": 1989,
+   "intro": "유쾌한 샘플링과 자유로운 태도로 힙합의 다른 가능성을 보여 준 그룹."
+  },
+  {
+   "genre": "JAZZ_RAP",
+   "title": "Rebirth of Slick (Cool Like Dat)",
+   "artist": "Digable Planets",
+   "year": 1993,
+   "intro": "쿨 재즈의 분위기를 그대로 힙합으로 옮긴 3인조."
+  },
+  {
+   "genre": "JAZZ_RAP",
+   "title": "Jazz Thing",
+   "artist": "Gang Starr",
+   "year": 1990,
+   "intro": "DJ 프리미어의 재즈 샘플과 구루의 랩으로 재즈 랩을 이끈 2인조."
+  },
+  {
+   "genre": "TRAP",
+   "title": "What You Know",
+   "artist": "T.I.",
+   "year": 2006,
+   "intro": "'트랩 뮤직'이라는 이름을 앨범 제목으로 알린 애틀랜타 래퍼."
+  },
+  {
+   "genre": "TRAP",
+   "title": "Lemonade",
+   "artist": "Gucci Mane",
+   "year": 2009,
+   "intro": "수많은 믹스테이프로 트랩 사운드를 퍼뜨린 애틀랜타 래퍼."
+  },
+  {
+   "genre": "TRAP",
+   "title": "Mask Off",
+   "artist": "Future",
+   "year": 2017,
+   "intro": "오토튠 멜로디와 트랩 비트를 섞어 2010년대 힙합의 표준을 만든 래퍼."
+  },
+  {
+   "genre": "TRAP",
+   "title": "Bad and Boujee",
+   "artist": "Migos",
+   "year": 2016,
+   "intro": "삼연음 플로우로 트랩의 랩 방식을 바꾼 애틀랜타 3인조."
+  }
+ ],
+ "aliases": {
+  "RNB": [
+   "rhythm and blues",
+   "rhythm & blues"
+  ],
+  "ROCKABILLY": [
+   "rock and roll",
+   "rock & roll"
+  ],
+  "DOO_WOP": [
+   "doo wop"
+  ],
+  "BRITISH_INVASION": [
+   "merseybeat",
+   "beat music"
+  ],
+  "SOUL": [
+   "southern soul",
+   "deep soul",
+   "northern soul"
+  ],
+  "PSYCHEDELIC": [
+   "psychedelic",
+   "neo-psychedelia",
+   "acid rock"
+  ],
+  "PROG": [
+   "progressive rock",
+   "art rock",
+   "symphonic prog"
+  ],
+  "GLAM": [
+   "glam rock",
+   "glam"
+  ],
+  "HEAVY_METAL": [
+   "thrash metal",
+   "speed metal",
+   "nwobhm",
+   "new wave of british heavy metal"
+  ],
+  "PUNK": [
+   "punk",
+   "punk rock"
+  ],
+  "NEW_WAVE": [
+   "post-punk"
+  ],
+  "HARDCORE": [
+   "hardcore punk",
+   "hardcore"
+  ],
+  "FUNK": [
+   "p-funk"
+  ],
+  "HIP_HOP": [
+   "hip-hop",
+   "rap"
+  ],
+  "INDIE": [
+   "indie",
+   "indie rock",
+   "garage rock revival",
+   "post-punk revival"
+  ],
+  "POST_BRITPOP": [
+   "post-britpop"
+  ],
+  "ALT_ROCK": [
+   "alternative rock",
+   "alternative",
+   "college rock"
+  ],
+  "SWING": [
+   "big band",
+   "swing music"
+  ],
+  "BEBOP": [
+   "bop"
+  ],
+  "COOL_JAZZ": [
+   "west coast jazz"
+  ],
+  "HARD_BOP": [
+   "soul jazz"
+  ],
+  "FREE_JAZZ": [
+   "avant-garde jazz",
+   "free improvisation"
+  ],
+  "JAZZ_FUSION": [
+   "fusion",
+   "jazz-rock",
+   "jazz rock"
+  ],
+  "ELECTRONIC": [
+   "krautrock",
+   "electronica",
+   "electronic music"
+  ],
+  "SYNTH_POP": [
+   "synthpop",
+   "electropop"
+  ],
+  "HOUSE": [
+   "chicago house",
+   "deep house",
+   "acid house"
+  ],
+  "TECHNO": [
+   "detroit techno"
+  ],
+  "DRUM_AND_BASS": [
+   "drum & bass",
+   "jungle",
+   "dnb"
+  ],
+  "TRIP_HOP": [
+   "trip-hop"
+  ],
+  "EAST_COAST": [
+   "boom bap"
+  ],
+  "G_FUNK": [
+   "west coast hip hop",
+   "gangsta rap"
+  ],
+  "SOUTHERN_HIP_HOP": [
+   "dirty south",
+   "crunk"
+  ],
+  "JAZZ_RAP": [
+   "alternative hip hop",
+   "conscious hip hop"
+  ],
+  "TRAP": [
+   "trap music"
+  ]
+ },
+ "artistMbids": {
+  "Hank Williams": "906bddec-bc73-49f8-ac1e-eaee691c6cf9",
+  "Johnny Cash": "d43d12a1-2dc9-4257-a2fd-0a3bb1081b86",
+  "Patsy Cline": "ad82dd72-0df3-4a09-8d7a-1af9c9e80522",
+  "Dolly Parton": "1d543e07-d0d2-4834-a8db-d65c50c2a856",
+  "Robert Johnson": "8a8bbba6-72f7-4900-a306-c40b94f2631b",
+  "Muddy Waters": "f86f1f07-d182-45ce-ae93-ef610880ca72",
+  "B.B. King": "dcb03ce3-67a5-4eb3-b2d1-2a12d93a38f3",
+  "Howlin' Wolf": "ca5b38c2-f39d-45a4-ad3d-daf4448846ef",
+  "Louis Armstrong": "eea8a864-fcda-4602-9569-38ab446decd6",
+  "Miles Davis": "561d854a-6a28-4aa7-8c99-323e6ce46c2a",
+  "John Coltrane": "b625448e-bf4a-41c3-a421-72ad46cdb831",
+  "The Dave Brubeck Quartet": "7bf711e9-4e69-4e08-b6e8-c0cb5805f1e7",
+  "Woody Guthrie": "cbd827e1-4e38-427e-a436-642683433732",
+  "Bob Dylan": "72c536dc-7137-4477-a521-567eeb840fa8",
+  "Joan Baez": "92d37892-6186-4459-9cc1-f0dde57652d0",
+  "Peter, Paul and Mary": "3d621c94-2356-4532-ad52-79e0ef73e20c",
+  "Fats Domino": "e787de5d-49e2-4b1f-9bde-1fd3a671b971",
+  "Little Richard": "95c2339b-8277-49a6-9aaf-08d8eeeaa0be",
+  "Ray Charles": "2ce02909-598b-44ef-a456-151ba0a3bd70",
+  "Chuck Berry": "592a3b6d-c42b-4567-99c9-ecf63bd66499",
+  "Elvis Presley": "01809552-4f87-45b0-afff-2c6f0730a3be",
+  "Carl Perkins": "068bd7ab-c38e-4fae-8ed2-cb0c153ed68f",
+  "Buddy Holly": "d352f5dd-3023-4565-a7bb-52396bf8821d",
+  "Eddie Cochran": "17995d1c-5b3c-4ee9-98f5-105ee3b4ada1",
+  "The Penguins": "b64b1d21-b722-442e-a984-789e1050f95a",
+  "The Platters": "3fb55c03-3ad9-4341-8d0b-7c4c49aefca0",
+  "The Drifters": "9e2d3f58-0653-4007-bcb7-1746fcdd9363",
+  "The Coasters": "c174f353-4666-4dfb-af54-5cc70b8afd55",
+  "The Beatles": "b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d",
+  "The Kinks": "17b53d9f-5c63-4a09-a593-dde4608e0db9",
+  "The Rolling Stones": "b071f9fa-14b0-4217-8e97-eb41da73f598",
+  "The Animals": "4d8afa16-4018-4ca8-8b5e-ede8f9314562",
+  "The Byrds": "2819834e-4e08-47b0-a2c4-b7672318e8f0",
+  "Simon & Garfunkel": "5d02f264-e225-41ff-83f7-d9b1f0b1874a",
+  "Creedence Clearwater Revival": "109958eb-a335-4c5e-907e-597ff4c6af46",
+  "Sam Cooke": "6c8fd0be-d961-454c-aee0-4366a6dbc993",
+  "Aretha Franklin": "2f9ecbed-27be-40e6-abca-6de49d50299e",
+  "Otis Redding": "82b1f5fd-cd31-41a9-b5d4-7e33f0eb9751",
+  "Marvin Gaye": "afdb7919-059d-43c1-b668-ba1d265e7e42",
+  "The Beach Boys": "ebfc1398-8d96-47e3-82c3-f782abcdb13d",
+  "Elton John": "b83bc61f-8451-4a5d-8b8e-7e9ed295e822",
+  "Fleetwood Mac": "bd13909f-1c29-4c27-a874-d4aaf27c5b1a",
+  "Neil Diamond": "a42d3fd5-55de-4206-86c3-4fbb5404018f",
+  "The Doors": "9efff43b-3b29-4082-824e-bc82f646f93d",
+  "Jefferson Airplane": "39c2a93d-9afa-4a22-9bba-c087ab056e1c",
+  "The Jimi Hendrix Experience": "33b3c323-77c2-417c-a5b4-af7e6a111cc9",
+  "The Velvet Underground": "94b0fb9d-a066-4823-b2ec-af1d324bcfcf",
+  "Lynyrd Skynyrd": "c544ed4d-2390-4442-a83e-1ea2883b09c8",
+  "The Allman Brothers Band": "72359492-22be-4ed9-aaa0-efa434fb2b01",
+  "ZZ Top": "a81259a0-a2f5-464b-866e-71220f2739f1",
+  "The Marshall Tucker Band": "568045b3-c3cb-4100-9bc5-ef9cdcebe643",
+  "King Crimson": "b38225b8-8e5f-42aa-bcdc-7bae5b5bdab3",
+  "Yes": "c1d4f2ba-cf39-460c-9528-6b827d3417a1",
+  "Pink Floyd": "83d91898-7763-47d7-b03b-b92132375c47",
+  "Genesis": "8e3fcd7d-bda1-4ca0-b987-b8528d2ee74e",
+  "T. Rex": "c842d29f-a297-48cd-bb71-4f77fd672b16",
+  "David Bowie": "5441c29d-3602-4898-b1a1-b77fa23b8e50",
+  "Roxy Music": "331ce348-1b08-40b9-8ed7-0763b92bd003",
+  "Alice Cooper": "4d7928cd-7ed2-4282-8c29-c0c9f966f1bd",
+  "Led Zeppelin": "678d88b2-87b0-403b-b63d-5da7465aecc3",
+  "Deep Purple": "79491354-3d83-40e3-9d8e-7592d58d790a",
+  "AC/DC": "66c662b6-6e2f-4930-8610-912e24c63ed1",
+  "Aerosmith": "3d2b98e5-556f-4451-a3ff-c50ea18d57cb",
+  "Black Sabbath": "5182c1d9-c7d2-4dad-afa0-ccfeada921a8",
+  "Judas Priest": "6b335658-22c8-485d-93de-0bc29a1d0349",
+  "Iron Maiden": "ca891d65-d9b0-4258-89f7-e6ba29d83767",
+  "Metallica": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
+  "Ramones": "d6ed7887-a401-47a8-893c-34b967444d26",
+  "Sex Pistols": "e5db18cb-4b1f-496d-a308-548b611090d3",
+  "The Clash": "8f92558c-2baa-4758-8c38-615519e9deda",
+  "Buzzcocks": "31e9c35b-2675-4632-8596-f9bd9286f6c8",
+  "Elvis Costello": "8a338e06-d182-46f2-bd16-30a09bc840ba",
+  "Blondie": "4d2956d1-a3f7-44bb-9a41-67563e1a0c94",
+  "Talking Heads": "a94a7155-c79d-4409-9fcf-220cb0e4dc3a",
+  "The Police": "9e0e2b01-41db-4008-bd8b-988977d6019a",
+  "Nirvana": "5b11f4ce-a62d-471e-81fc-a69a8278c7da",
+  "Pearl Jam": "83b9cbe7-9857-49e2-ab8e-b57b01038103",
+  "Soundgarden": "153c9281-268f-4cf3-8938-f5a4593e5df4",
+  "Alice in Chains": "4bd95eea-b9f6-4d70-a36c-cfea77431553",
+  "Dead Kennedys": "37c78aeb-d196-42b5-b991-6afb4fc9bc2e",
+  "Black Flag": "9941a936-196a-4a62-ae53-a69cbc33f20e",
+  "Minor Threat": "09037f07-42bc-46ac-a1ee-37f834451fee",
+  "Bad Brains": "e919b253-da5b-4aae-a444-6a368376a2d6",
+  "Sly & the Family Stone": "b7ec4c54-1f93-4bf2-957f-7b9921ab84ea",
+  "James Brown": "20ff3303-4fe2-4a47-a1b6-291e26aa3438",
+  "Parliament": "d1947987-9614-49ae-bd36-8000e6b6f7d0",
+  "Prince": "070d193a-845c-479f-980e-bef15710653e",
+  "Bee Gees": "bf0f7e29-dfe1-416c-b5c6-f9ebc19ea810",
+  "Donna Summer": "b60527cc-54f3-4bbe-a01b-dcf34c95ae14",
+  "Chic": "a4ed036b-5f18-439c-b1e1-96d205bab255",
+  "Gloria Gaynor": "d5c51c36-ac67-4727-91ed-ee9f0df81a2d",
+  "The Sugarhill Gang": "336f2e14-b064-45c8-8b2a-01663a0bee64",
+  "Grandmaster Flash and the Furious Five": "1390d663-2f56-4b41-9f75-f45ba489250b",
+  "Run-DMC": "5ecc3f72-20a6-47a0-8dc5-fb0b3dadeea0",
+  "Public Enemy": "bf2e15d0-4b77-469e-bfb4-f8414415baca",
+  "The Smiths": "40f5d9e4-2de7-4f2d-ad41-e31a9a9fea27",
+  "Pixies": "b6b2bb8d-54a9-491f-9607-7b546023b433",
+  "The Stone Roses": "b5fa29f1-6c22-4321-a488-b5f363b06b06",
+  "R.E.M.": "ea4dfa26-f633-4da6-a52a-f49ea4897b58",
+  "Oasis": "39ab1aed-75e0-4140-bd47-540276886b60",
+  "Blur": "ba853904-ae25-4ebb-89d6-c44cfbd71bd2",
+  "Pulp": "76b2e842-5e85-4c97-ab62-d5bc315595b5",
+  "Suede": "a55c2f1b-3f3f-4d6a-aa30-5e186dbadce6",
+  "Travis": "22a40b75-affc-4e69-8884-266d087e4751",
+  "Coldplay": "cc197bad-dc9c-440d-a5b5-d52ba2e14234",
+  "Keane": "c7020c6d-cae9-4db3-92a7-e5c561cbad50",
+  "Doves": "9de8f66e-3cd1-4f11-8328-38200f0612b0",
+  "Sonic Youth": "5cbef01b-cc35-4f52-af7b-d0df0c4f61b9",
+  "Radiohead": "a74b1b7f-71a5-4011-9441-d0b5e4122711",
+  "Jane's Addiction": "e3434cc7-d348-491a-9dc8-325af3d9086d",
+  "Al Green": "fb7272ba-f130-4f0a-934d-6eeea4c18c9a",
+  "Albert Ayler": "b2dcc67a-45f9-4b9f-8221-3da4e0d32491",
+  "Art Blakey & The Jazz Messengers": "209ddf15-ee0a-41a1-a1f5-6f4c0409d2ee",
+  "Benny Goodman": "b09ae88f-4156-4caa-b129-1cacb5e1632e",
+  "Billie Holiday": "d59c4cda-11d9-48db-8bfe-b557ee602aed",
+  "Billy Joel": "64b94289-9474-4d43-8c93-918ccc1920d1",
+  "Black Oak Arkansas": "1ff4b10b-4214-48b7-87b4-64394773bfcc",
+  "Bo Diddley": "bf659d74-0b61-488c-8a7d-594f43bed9e0",
+  "Bud Powell": "dbc5809c-7837-4b6f-961e-340d64fbb41c",
+  "Buffalo Springfield": "22dc19af-d085-4c9b-adfb-22ec256251f1",
+  "Cannonball Adderley": "a4c73ebe-b2c7-4f13-b99d-2fe1f9f27da8",
+  "Charlie Parker": "c7356af9-9ea6-4a78-a55b-c73775716312",
+  "Chet Baker": "1ba1d493-7114-45e2-b163-a36d49a0c065",
+  "Count Basie": "0dbd6300-efdc-420b-857e-895e18fad317",
+  "Cream": "04cd0cfd-bfd1-4c36-bc38-95c35e2c045f",
+  "Descendents": "f035837e-4117-438d-a524-cacf43500e68",
+  "Devo": "d2db1078-c170-4e22-b261-14f3ad60a690",
+  "Dizzy Gillespie": "e9ba8ccb-505f-4e5c-b909-65998d0d35b5",
+  "Duke Ellington": "3af06bc4-68ad-4cae-bb7a-7eeeb45e411f",
+  "Earth, Wind & Fire": "535afeda-2538-435d-9dd1-5e10be586774",
+  "Elastica": "46693641-1e2e-4aae-80ed-6b28170de63a",
+  "Elbow": "3cb3928a-526c-4a3d-93c5-53315fa9bde0",
+  "Ella Fitzgerald": "54799c0e-eb45-4eea-996d-c4d71a63c499",
+  "Etta James": "e22d2f66-881e-41ca-9356-544697ee5f90",
+  "Frankie Lymon & The Teenagers": "b3b5ceef-0d3e-4191-a621-5e97d6ed3d97",
+  "Fugazi": "233fc3f3-6de2-465c-985e-e721dbabbace",
+  "Gene Vincent": "f491f5ad-0946-40a6-bab9-da319c3f3995",
+  "Gerry Mulligan": "68f19808-1f7b-46d4-bd1d-71aaf0f6b267",
+  "Glenn Miller": "7b353d3c-2bd9-40e3-a21d-b7da3f941339",
+  "Grateful Dead": "6faa7ca7-0d99-4a5e-bfa6-1fd5037520c6",
+  "Guns N' Roses": "eeb1195b-f213-4ce1-b28c-8565211f8e43",
+  "Herbie Hancock": "27613b78-1b9d-4ec3-9db5-fa0743465fdd",
+  "Horace Silver": "d185d986-ee96-4fd3-bd61-8c848a4765b6",
+  "Hüsker Dü": "5c4c90a4-539f-4101-83cf-301bc6a94e06",
+  "Ike & Tina Turner": "1c7b3786-b99a-40ab-81e4-f3056da19e13",
+  "Jethro Tull": "ece57992-dc2e-4f67-a269-fa43626c1a3d",
+  "John Lee Hooker": "b0122194-c49a-46a1-ade7-84d1d76bd8e9",
+  "KC and the Sunshine Band": "76a5a114-ed6a-4eb6-8a81-ad5768d4b41c",
+  "Kool & the Gang": "2469950a-f0ca-425a-bfbc-baf55ea3afde",
+  "LL Cool J": "a4dd0e77-83b8-4e92-89b7-effb0e47fd8c",
+  "Loretta Lynn": "613260c3-d620-4645-94cd-33cd55f29b1e",
+  "Mahavishnu Orchestra": "a2be74f5-0735-46f7-a295-7e41aab30029",
+  "Mott the Hoople": "435f1441-0f43-479d-92db-a506449a686b",
+  "Motörhead": "57961a97-3796-4bf7-9f02-a985a8979ae9",
+  "Mudhoney": "e675295a-1efe-4247-aa3b-53b78d0cdffc",
+  "N.W.A": "3a54bffa-2314-44a2-927b-60144119c780",
+  "Ornette Coleman": "169c0d1b-fcb8-4a43-9097-829aa7b39205",
+  "Outlaws": "e1a01561-204f-49aa-8e9d-12d5d39564e1",
+  "Patti Smith": "d135874d-9cae-4fef-97e3-36acbd9f5a26",
+  "Pete Seeger": "af18a9bc-e4ab-4068-9489-b64e8186fcf1",
+  "Queen": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+  "Red Hot Chili Peppers": "8bfac288-ccc5-448d-9573-c33ea2aa5c30",
+  "Rush": "534ee493-bfac-4575-a44a-0ae41e2c3fe4",
+  "Slade": "2e700147-56a3-416b-a95d-381ea42f947f",
+  "Slayer": "bdacc37b-8633-4bf8-9dd5-4662ee651aec",
+  "Snow Patrol": "a66999a7-ae5c-460e-ba94-1a01143ae847",
+  "Sonny Rollins": "3b47247e-5b57-49b6-a0ed-bad80243802a",
+  "Stan Getz": "8f2422ab-0ec6-4c92-80c4-afe9622fab32",
+  "Stevie Wonder": "1ee18fb3-18a6-4c7f-8ba0-bc41cdd0462e",
+  "Stone Temple Pilots": "8c32bb01-58a3-453b-8050-8c0620edb0e5",
+  "Sun Ra": "c27cac8e-4c4a-48c0-a4ba-41399b9c176d",
+  "Supergrass": "6386ddff-0d13-4685-9f0a-a82bf022fb1c",
+  "The Cars": "092b603f-eb4c-4958-b10e-02420de5885b",
+  "The Damned": "77d21c13-846f-4f48-9546-873949eff6ae",
+  "The Everly Brothers": "091ec508-877f-4e3c-92a3-10903bbbc7ad",
+  "The Five Satins": "178dbef0-eb15-407a-beb8-1c70b1fd1b97",
+  "The Kingston Trio": "78977492-5888-4c7a-92b3-95293e90a653",
+  "The Mamas & the Papas": "ff294730-0315-440d-a543-54005779c15b",
+  "The Modern Jazz Quartet": "75472b2f-55ca-47bb-a192-5ac8601350ba",
+  "The Replacements": "dc0d05ce-2f47-4962-b4fa-8631a0a51987",
+  "The Smashing Pumpkins": "ba0d6274-db14-4ef5-b28d-657ebde1a396",
+  "The Who": "9fdaa16b-a6c4-4831-b87c-bc9ca8ce7eaa",
+  "The Yardbirds": "191de76f-a224-445d-b041-54df16d65bf7",
+  "Thelonious Monk": "8e8c7417-c905-46b1-b42a-5260b4274ed4",
+  "Van Halen": "b665b768-0d83-4363-950c-31ed39317c15",
+  "Village People": "f19d3d49-be22-4ca6-9903-64d86984fbf2",
+  "Weather Report": "0f9997bd-e079-429e-8ccd-9378c9b0c746",
+  "Willie Nelson": "668fd73c-bf54-4310-a139-305517f05311",
+  "2Pac": "382f1005-e9ab-4684-afd4-0bdae4ee37f2",
+  "A Tribe Called Quest": "9689aa5a-4471-4fb4-9721-07cecda0fa9f",
+  "DJ Shadow": "efa2c11a-1a35-4b60-bc1b-66d37de88511",
+  "Daft Punk": "056e4f3e-d505-4dad-8ec1-d04f521cbb56",
+  "De La Soul": "a8ebde98-7e91-46c7-992c-90039ba42017",
+  "Depeche Mode": "8538e728-ca0b-4321-b7e5-cff6565dd4c0",
+  "Digable Planets": "ff44f779-74ab-48f8-aac3-39ebe8f7c18e",
+  "Dr. Dre": "5f6ab597-f57a-40da-be9e-adad48708203",
+  "Eurythmics": "b4d32cff-f19e-455f-86c4-f347d824ca61",
+  "Frankie Knuckles": "b7a98e65-7ce4-4fab-8cf3-6b3ccda6115a",
+  "Future": "48262e82-db9f-4a92-b650-dfef979b73ec",
+  "Gang Starr": "9ef8042a-2528-4f5c-b7c1-5e72b1efe170",
+  "Geto Boys": "a78ca453-3a53-4b19-8b2d-61b10dd45558",
+  "Giorgio Moroder": "38dd6337-19ae-4793-ab4b-313eff523457",
+  "Goldie": "c5393047-0c44-48eb-b5a8-070759f04371",
+  "Gucci Mane": "36494952-f434-45d8-a958-8b4acdbcf8a8",
+  "Inner City": "65a8e571-8a08-433f-a5bf-ead38c269ea6",
+  "Jean-Michel Jarre": "86e2e2ad-6d1b-44fd-9463-b6683718a1cc",
+  "Jeff Mills": "470a4ced-1323-4c91-8fd5-0bb3fb4c932a",
+  "Kraftwerk": "5700dcd4-c139-4f31-aa3e-6382b9af9032",
+  "LTJ Bukem": "28c1b7b7-355a-48b1-b2c4-75b8eb8080ef",
+  "Marshall Jefferson": "93938558-9a84-4a7f-a15c-6f145100ff5c",
+  "Massive Attack": "10adbe5e-a2c0-4bf3-8249-2b4cbf6e6ca8",
+  "Migos": "0221734a-35a8-40f7-b5c5-2f61a200bc7c",
+  "Mobb Deep": "d75d1f08-bbb8-4eae-9877-399ca9121197",
+  "Model 500": "e569aee8-33ff-48e5-b0ed-4ceba1a37714",
+  "Mr. Fingers": "1e47567e-5192-43b9-af98-75e4998f9e52",
+  "Nas": "cfbc0924-0035-4d6c-8197-f024653af823",
+  "New Order": "f1106b17-dcbb-45f6-b938-199ccfab50cc",
+  "OutKast": "73fdb566-a9b1-494c-9f32-51768ec9fd27",
+  "Pendulum": "beff21d3-88c7-4ee0-8b7a-40b6db22c6d7",
+  "Pet Shop Boys": "be540c02-7898-4b79-9acc-c8122c7d9e83",
+  "Portishead": "8f6bd1e4-fbe1-4f50-aa9b-94c450ec0f11",
+  "Rhythim Is Rhythim": "159edf29-c4ae-49c7-b1e6-1f082c60d4e3",
+  "Roni Size": "2eeba1d4-f67d-45be-a22e-ab73e925aa43",
+  "Snoop Dogg": "f90e8b26-9e52-4669-a5c9-e28529c47894",
+  "T.I.": "f7ba7fbe-c6bd-4ac0-bee9-c25c558d7d62",
+  "Tangerine Dream": "23d8426c-18c7-46e6-a51d-7395bd43c641",
+  "The Notorious B.I.G.": "d5d97b2b-b83b-4976-814a-056d9076c8c3",
+  "Three 6 Mafia": "a8754ac4-a85e-4f48-a81f-eecd482570ef",
+  "Tricky": "5bf64d94-efd9-4334-96fd-e6197b0b02b8",
+  "UGK": "9603810b-5d6d-41a6-aca8-330ef966d55c",
+  "Warren G": "85d7666c-d3ce-4e2c-8b1b-f20db7cdae4f",
+  "Wu-Tang Clan": "0febdcf7-4e1f-4661-9493-b40427de2c13"
+ }
+}

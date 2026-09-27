@@ -1,0 +1,12 @@
+# MySQL 없이 바로 띄워 보기: ./gradlew bootRun --args='--spring.profiles.active=h2'
+# 메모리 DB라 서버를 끄면 데이터가 사라진다.
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:music_roadmap;DB_CLOSE_DELAY=-1
+    username: sa
+    password: ""
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
