@@ -26,7 +26,12 @@ public final class ArchiveDtos {
             boolean albumsAvailable,
             Long officialGenreId,
             GenreOverrideResponse myGenre,
-            MyNotes myNotes) {
+            MyNotes myNotes,
+            ExternalIntro externalIntro) {
+    }
+
+    /** 위키백과 등 외부 소개 글. 출처(label, url)를 반드시 함께 보여준다 (기획서 14.1) */
+    public record ExternalIntro(String text, String sourceLabel, String sourceUrl) {
     }
 
     /** 이 가수가 계보도에서 맡은 역할 (장르별 소개) */

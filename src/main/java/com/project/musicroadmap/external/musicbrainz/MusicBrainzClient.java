@@ -67,6 +67,15 @@ public class MusicBrainzClient {
         return artist;
     }
 
+    /** 아티스트의 위키데이터 ID (없으면 빈 값) */
+    public java.util.Optional<String> wikidataId(String mbid) {
+        MbUrlRelations relations = execute(() -> restClient.get()
+                .uri("/artist/{mbid}?inc=url-rels&fmt=json", mbid)
+                .retrieve()
+                .body(MbUrlRelations.class));
+        return relations == null ? java.util.Optional.empty() : relations.wikidataId();
+    }
+
     /**
      * 아티스트의 앨범 단위 목록 (type=album). 한 번에 100개씩, 최대 maxPages 페이지.
      * release-group-status=website-default: MusicBrainz 웹사이트 기본 목록과 같게 해적판·비공식 음반을 뺀다.

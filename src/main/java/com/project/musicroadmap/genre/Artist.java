@@ -46,6 +46,19 @@ public class Artist {
     /** 앨범 목록을 마지막으로 가져온 시각 (기획서 18장, 30일마다 갱신) */
     private LocalDateTime albumsSyncedAt;
 
+    /** 외부 소개 글 (위키백과 요약, 기획서 14.2 ⑤). 출처 표기 필수 */
+    @Column(length = 2000)
+    private String introText;
+
+    @Column(length = 500)
+    private String introSourceUrl;
+
+    @Column(length = 30)
+    private String introSourceLabel;
+
+    /** 소개 글을 마지막으로 찾아본 시각 (못 찾았어도 기록해서 매번 다시 부르지 않는다) */
+    private LocalDateTime introFetchedAt;
+
     public static Artist curated(String name, Genre primaryGenre) {
         Artist artist = new Artist();
         artist.name = name;
@@ -69,6 +82,16 @@ public class Artist {
         if (this.primaryGenre == null) {
             this.primaryGenre = genre;
         }
+    }
+
+    /** intro가 null이면 "찾아봤지만 없음" */
+    public void applyIntro(com.project.musicroadmap.genre.intro.ArtistIntro intro, LocalDateTime now) {
+        if (intro != null) {
+            this.introText = intro.text().length() > 2000 ? intro.text().substring(0, 1997) + "..." : intro.text();
+            this.introSourceUrl = intro.sourceUrl();
+            this.introSourceLabel = intro.sourceLabel();
+        }
+        this.introFetchedAt = now;
     }
 
     public void markAlbumsSynced(LocalDateTime now) {
