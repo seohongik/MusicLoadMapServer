@@ -36,6 +36,10 @@ public class User {
     @Column(nullable = false, length = 30)
     private TrackSelectionType trackSelectionType;
 
+    /** 내가 추가한 연결(UserEdge)을 로드맵 계산에 쓸지 (기획서 15.2 규칙 5, 기본 꺼짐) */
+    @Column(nullable = false, columnDefinition = "boolean default false")
+    private boolean useMyEdges;
+
     @Column(nullable = false)
     private LocalDateTime createdAt;
 
@@ -50,5 +54,9 @@ public class User {
 
     public void changeTrackSelectionType(TrackSelectionType type) {
         this.trackSelectionType = type;
+    }
+
+    public void changeUseMyEdges(boolean useMyEdges) {
+        this.useMyEdges = useMyEdges;
     }
 }

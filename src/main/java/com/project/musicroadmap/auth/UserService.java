@@ -26,4 +26,18 @@ public class UserService {
         user.changeTrackSelectionType(type);
         return user.getTrackSelectionType();
     }
+
+    @Transactional(readOnly = true)
+    public boolean usesMyEdges(Long userId) {
+        return userRepository.findById(userId)
+                .map(User::isUseMyEdges)
+                .orElseThrow(() -> new BusinessException(ErrorCode.UNAUTHORIZED));
+    }
+
+    @Transactional
+    public boolean changeUseMyEdges(Long userId, boolean useMyEdges) {
+        User user = userRepository.findById(userId).orElseThrow(() -> new BusinessException(ErrorCode.UNAUTHORIZED));
+        user.changeUseMyEdges(useMyEdges);
+        return user.isUseMyEdges();
+    }
 }

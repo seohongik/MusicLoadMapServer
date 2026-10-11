@@ -30,6 +30,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class PersonalController {
 
     private final PersonalService personalService;
+    private final UserGraphService userGraphService;
 
     /** 대상 하나에 남긴 내 감상과 태그 (장르 상세 화면용) */
     @GetMapping("/notes/{targetType}/{targetId}")
@@ -75,6 +76,25 @@ public class PersonalController {
     public List<String> removeTag(@LoginUser Long userId, @PathVariable PersonalTargetType targetType,
                                   @PathVariable Long targetId, @RequestParam String name) {
         return personalService.removeTag(userId, targetType, targetId, name);
+    }
+
+    // --- 나만의 연결 (계산에 쓸지는 PATCH /api/me/settings useMyEdges) ---
+
+    @GetMapping("/edges")
+    public List<UserGraphService.UserEdgeResponse> edges(@LoginUser Long userId) {
+        return userGraphService.edges(userId);
+    }
+
+    @PutMapping("/edges")
+    public UserGraphService.UserEdgeResponse addEdge(@LoginUser Long userId,
+                                                     @Valid @RequestBody UserGraphService.UserEdgeRequest request) {
+        return userGraphService.add(userId, request);
+    }
+
+    @DeleteMapping("/edges/{fromGenreId}/{toGenreId}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteEdge(@LoginUser Long userId, @PathVariable Long fromGenreId, @PathVariable Long toGenreId) {
+        userGraphService.delete(userId, fromGenreId, toGenreId);
     }
 
     @GetMapping("/genre-overrides")
