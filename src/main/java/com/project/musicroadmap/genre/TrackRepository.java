@@ -17,4 +17,6 @@ public interface TrackRepository extends JpaRepository<Track, Long> {
     Optional<Track> findWithArtistById(Long id);
 
     Optional<Track> findByTitle(String title);
+
+    List<Track> findByArtistId(Long artistId);
 }
