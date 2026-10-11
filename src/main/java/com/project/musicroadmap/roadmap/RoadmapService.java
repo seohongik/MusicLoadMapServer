@@ -39,6 +39,8 @@ import com.project.musicroadmap.roadmap.domain.VerdictSnapshotRepository;
 import com.project.musicroadmap.roadmap.exploration.ExplorationRequest;
 import com.project.musicroadmap.roadmap.exploration.ExplorationStrategyResolver;
 import com.project.musicroadmap.roadmap.exploration.ExplorationType;
+import com.project.musicroadmap.roadmap.follow.FollowMode;
+import com.project.musicroadmap.roadmap.follow.FollowStrategyResolver;
 import com.project.musicroadmap.roadmap.selection.TrackSelection;
 import com.project.musicroadmap.roadmap.selection.TrackSelectionResolver;
 import com.project.musicroadmap.weight.UserWeights;
@@ -70,6 +72,7 @@ public class RoadmapService {
     private final TrackSelectionResolver selectionResolver;
     private final StepCompletionResolver completionResolver;
     private final GenreVerdictPolicy verdictPolicy;
+    private final FollowStrategyResolver followResolver;
     private final AppClock clock;
 
     @Transactional(readOnly = true)
@@ -112,6 +115,28 @@ public class RoadmapService {
         User user = userRepository.getReferenceById(userId);
         Roadmap roadmap = Roadmap.create(user, request.explorationType(), target,
                 request.maxSteps(), path, clock.now());
+        activateNext(roadmap, userId);
+        return RoadmapResponse.from(roadmapRepository.save(roadmap));
+    }
+
+    /**
+     * 기획서 21장: 공유된 로드맵 따라가기. 따라가는 방식(전략)에 따라 같은 경로라도 유저마다 출발 경로가 다르다.
+     * 곡은 내 곡 고르기 전략·선호로 고른다.
+     */
+    public RoadmapResponse follow(Long userId, String shareCode, FollowMode mode) {
+        Roadmap source = roadmapRepository.findByShareCode(shareCode)
+                .orElseThrow(() -> new BusinessException(ErrorCode.SHARED_ROADMAP_NOT_FOUND));
+        if (source.getUser().getId().equals(userId)) {
+            throw new BusinessException(ErrorCode.CANNOT_FOLLOW_OWN);
+        }
+        if (roadmapRepository.existsByUserIdAndStatus(userId, RoadmapStatus.IN_PROGRESS)) {
+            throw new BusinessException(ErrorCode.ROADMAP_ALREADY_IN_PROGRESS);
+        }
+        List<Long> path = followResolver.get(mode).startPath(source.activeGenreIds(), weightService.load(userId));
+        if (path.size() < 2) {
+            throw new BusinessException(ErrorCode.NOTHING_TO_FOLLOW);
+        }
+        Roadmap roadmap = Roadmap.follow(userRepository.getReferenceById(userId), source, path, mode, clock.now());
         activateNext(roadmap, userId);
         return RoadmapResponse.from(roadmapRepository.save(roadmap));
     }
@@ -296,7 +321,7 @@ public class RoadmapService {
         step.finish(verdict, clock.now());
 
         boolean changed = false;
-        if (verdict != Verdict.NEUTRAL) {
+        if (verdict != Verdict.NEUTRAL && recalculates(roadmap)) {
             int before = roadmap.getVersion();
             recalculate(roadmap, graph, weights, verdict == Verdict.DISLIKED);
             changed = roadmap.getVersion() != before;
@@ -305,6 +330,12 @@ public class RoadmapService {
         activateNext(roadmap, userId);
         return new StepResultResponse(step.getGenreId(), verdict, changed,
                 roadmap.getStatus() == RoadmapStatus.COMPLETED, roadmap.getVersion());
+    }
+
+    /** 따라가는 로드맵은 따라가기 전략이 정한다 (그대로 따라가기는 경로를 바꾸지 않음) */
+    private boolean recalculates(Roadmap roadmap) {
+        FollowMode mode = roadmap.getFollowMode();
+        return mode == null || followResolver.get(mode).recalculatesOnVerdict();
     }
 
     /**

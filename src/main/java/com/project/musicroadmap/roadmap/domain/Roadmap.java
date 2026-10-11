@@ -2,6 +2,7 @@ package com.project.musicroadmap.roadmap.domain;
 
 import com.project.musicroadmap.auth.User;
 import com.project.musicroadmap.roadmap.exploration.ExplorationType;
+import com.project.musicroadmap.roadmap.follow.FollowMode;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -68,6 +69,19 @@ public class Roadmap {
 
     private LocalDateTime endedAt;
 
+    /** 공유 코드 (기획서 21장). 공유하지 않으면 null */
+    @Column(unique = true, length = 12)
+    private String shareCode;
+
+    private LocalDateTime sharedAt;
+
+    /** 다른 유저의 로드맵을 따라가는 중이면 그 로드맵과 방식 */
+    private Long followedRoadmapId;
+
+    @Enumerated(EnumType.STRING)
+    @Column(length = 20)
+    private FollowMode followMode;
+
     @OneToMany(mappedBy = "roadmap", cascade = CascadeType.ALL, orphanRemoval = true)
     @OrderBy("stepIndex ASC, version ASC")
     private List<RoadmapStep> steps = new ArrayList<>();
@@ -90,6 +104,34 @@ public class Roadmap {
         }
         roadmap.steps.get(0).markStartGenre();
         return roadmap;
+    }
+
+    /** 공유된 로드맵을 따라가는 새 로드맵. maxSteps는 따라갈 경로 길이 */
+    public static Roadmap follow(User user, Roadmap source, List<Long> path, FollowMode mode, LocalDateTime now) {
+        Roadmap roadmap = create(user, source.explorationType, source.targetGenreId, path.size() - 1, path, now);
+        roadmap.followedRoadmapId = source.id;
+        roadmap.followMode = mode;
+        return roadmap;
+    }
+
+    public void share(String code, LocalDateTime now) {
+        if (shareCode == null) {
+            this.shareCode = code;
+            this.sharedAt = now;
+        }
+    }
+
+    public void unshare() {
+        this.shareCode = null;
+        this.sharedAt = null;
+    }
+
+    public boolean isShared() {
+        return shareCode != null;
+    }
+
+    public List<Long> activeGenreIds() {
+        return activeSteps().stream().map(RoadmapStep::getGenreId).toList();
     }
 
     /** 재계산으로 빠진 스텝을 제외한 현재 경로 */

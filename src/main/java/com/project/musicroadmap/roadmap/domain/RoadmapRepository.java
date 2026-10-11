@@ -13,4 +13,12 @@ public interface RoadmapRepository extends JpaRepository<Roadmap, Long> {
     List<Roadmap> findByUserIdOrderByStartedAtAsc(Long userId);
 
     Optional<Roadmap> findByIdAndUserId(Long id, Long userId);
+
+    Optional<Roadmap> findByShareCode(String shareCode);
+
+    boolean existsByShareCode(String shareCode);
+
+    List<Roadmap> findTop30ByShareCodeIsNotNullOrderBySharedAtDesc();
+
+    long countByFollowedRoadmapId(Long followedRoadmapId);
 }

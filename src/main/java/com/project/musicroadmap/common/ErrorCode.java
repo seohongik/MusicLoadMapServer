@@ -29,6 +29,11 @@ public enum ErrorCode {
     STEP_COMPLETION_NOT_ALLOWED(HttpStatus.BAD_REQUEST, "지금 설정에서는 배정된 곡에 모두 반응해야 다음 장르로 넘어갈 수 있어요."),
     VERDICT_CHANGE_NOT_ALLOWED(HttpStatus.BAD_REQUEST, "바꿀 수 있는 판정이 없어요. 직전 장르의 판정만, 다음 장르에서 반응하기 전까지 바꿀 수 있어요."),
 
+    // 공유·따라가기 (기획서 21장)
+    SHARED_ROADMAP_NOT_FOUND(HttpStatus.NOT_FOUND, "공유된 로드맵을 찾을 수 없어요. 코드를 확인해 주세요."),
+    CANNOT_FOLLOW_OWN(HttpStatus.BAD_REQUEST, "내 로드맵은 따라갈 수 없어요."),
+    NOTHING_TO_FOLLOW(HttpStatus.BAD_REQUEST, "내가 싫어하는 장르를 빼고 나니 따라갈 장르가 없어요. '그대로 따라가기'를 골라 보세요."),
+
     // 선호 (기획서 16장)
     TARGET_NOT_FOUND(HttpStatus.NOT_FOUND, "선호를 저장할 대상을 찾을 수 없어요."),
 
