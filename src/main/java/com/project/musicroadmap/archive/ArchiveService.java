@@ -6,7 +6,6 @@ import com.project.musicroadmap.archive.ArchiveDtos.AlbumTrackItem;
 import com.project.musicroadmap.archive.ArchiveDtos.ArtistDetailResponse;
 import com.project.musicroadmap.archive.ArchiveDtos.GenreRole;
 import com.project.musicroadmap.common.AppClock;
-import com.project.musicroadmap.common.BusinessException;
 import com.project.musicroadmap.common.ErrorCode;
 import com.project.musicroadmap.external.musicbrainz.MbRelease;
 import com.project.musicroadmap.external.musicbrainz.MbReleaseGroup;
@@ -14,6 +13,10 @@ import com.project.musicroadmap.external.musicbrainz.MusicBrainzClient;
 import com.project.musicroadmap.genre.Artist;
 import com.project.musicroadmap.genre.ArtistRepository;
 import com.project.musicroadmap.genre.GenreArtistRepository;
+import com.project.musicroadmap.genre.intro.ArtistIntro;
+import com.project.musicroadmap.genre.intro.ArtistIntroResolver;
+import com.project.musicroadmap.archive.ArchiveDtos.ExternalIntro;
+import com.project.musicroadmap.common.BusinessException;
 import com.project.musicroadmap.personal.PersonalService;
 import com.project.musicroadmap.personal.PersonalTargetType;
 import com.project.musicroadmap.preference.TargetType;
@@ -54,6 +57,7 @@ public class ArchiveService {
     private final PreferenceService preferenceService;
     private final PersonalService personalService;
     private final MusicBrainzClient musicBrainzClient;
+    private final ArtistIntroResolver introResolver;
     private final TransactionTemplate transactionTemplate;
     private final AppClock clock;
 
@@ -63,6 +67,9 @@ public class ArchiveService {
 
         if (artist.getMbid() != null && needsAlbumSync(artist)) {
             syncAlbums(artist);
+        }
+        if (artist.getMbid() != null && needsIntro(artist)) {
+            syncIntro(artist);
         }
 
         return inTx(() -> {
@@ -77,7 +84,8 @@ public class ArchiveService {
             return new ArtistDetailResponse(artist.getId(), artist.getName(),
                     preferences.of(TargetType.ARTIST, artistId), roles, albums, artist.getMbid() != null, official,
                     personalService.overrideOf(userId, artistId).orElse(null),
-                    personalService.notesOf(userId, PersonalTargetType.ARTIST, artistId));
+                    personalService.notesOf(userId, PersonalTargetType.ARTIST, artistId),
+                    externalIntro(artistRepository.findById(artistId).orElseThrow()));
         });
     }
 
@@ -99,6 +107,31 @@ public class ArchiveService {
                     album.getTitle(), album.getReleaseYear(), album.coverUrl(), tracks,
                     personalService.notesOf(userId, PersonalTargetType.ALBUM, albumId));
         });
+    }
+
+    // --- 소개 글 (기획서 14.2 ⑤) ---
+
+    private boolean needsIntro(Artist artist) {
+        LocalDateTime fetched = artist.getIntroFetchedAt();
+        return fetched == null || fetched.isBefore(clock.now().minus(ALBUM_REFRESH));
+    }
+
+    /** 외부 서비스가 안 되면 다음에 다시 시도하도록 기록하지 않는다 */
+    private void syncIntro(Artist artist) {
+        ArtistIntro intro;
+        try {
+            intro = introResolver.current().fetch(artist.getMbid()).orElse(null);
+        } catch (BusinessException e) {
+            log.warn("소개 글을 가져오지 못했어요: {} ({})", artist.getName(), e.getErrorCode());
+            return;
+        }
+        transactionTemplate.executeWithoutResult(status ->
+                artistRepository.findById(artist.getId()).orElseThrow().applyIntro(intro, clock.now()));
+    }
+
+    private static ExternalIntro externalIntro(Artist artist) {
+        return artist.getIntroText() == null ? null
+                : new ExternalIntro(artist.getIntroText(), artist.getIntroSourceLabel(), artist.getIntroSourceUrl());
     }
 
     // --- 앨범 목록 ---------------------------------------------------------------------------------
