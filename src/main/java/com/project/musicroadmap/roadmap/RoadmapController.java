@@ -3,6 +3,9 @@ package com.project.musicroadmap.roadmap;
 import com.project.musicroadmap.auth.LoginUser;
 import com.project.musicroadmap.roadmap.RoadmapDtos.CreateRoadmapRequest;
 import com.project.musicroadmap.roadmap.RoadmapDtos.FeedbackResponse;
+import com.project.musicroadmap.roadmap.RoadmapDtos.FollowRequest;
+import com.project.musicroadmap.roadmap.RoadmapDtos.ShareResponse;
+import com.project.musicroadmap.roadmap.RoadmapDtos.SharedRoadmapResponse;
 import com.project.musicroadmap.roadmap.RoadmapDtos.ListenRequest;
 import com.project.musicroadmap.roadmap.RoadmapDtos.NextRequest;
 import com.project.musicroadmap.roadmap.RoadmapDtos.StepResultResponse;
@@ -16,6 +19,7 @@ import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -30,6 +34,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class RoadmapController {
 
     private final RoadmapService roadmapService;
+    private final RoadmapShareService shareService;
 
     @PostMapping("/roadmaps/preview")
     public List<PreviewResult> preview(@LoginUser Long userId, @Valid @RequestBody PreviewRequest request) {
@@ -79,5 +84,35 @@ public class RoadmapController {
     @PostMapping("/listens")
     public FeedbackResponse listen(@LoginUser Long userId, @Valid @RequestBody ListenRequest request) {
         return roadmapService.submitFeedback(userId, request);
+    }
+
+    // --- 공유·따라가기 (기획서 21장) ---
+
+    @PostMapping("/roadmaps/{roadmapId}/share")
+    public ShareResponse share(@LoginUser Long userId, @PathVariable Long roadmapId) {
+        return shareService.share(userId, roadmapId);
+    }
+
+    @DeleteMapping("/roadmaps/{roadmapId}/share")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void unshare(@LoginUser Long userId, @PathVariable Long roadmapId) {
+        shareService.unshare(userId, roadmapId);
+    }
+
+    @GetMapping("/shared-roadmaps")
+    public List<SharedRoadmapResponse> sharedRoadmaps(@LoginUser Long userId) {
+        return shareService.recent(userId);
+    }
+
+    @GetMapping("/shared-roadmaps/{shareCode}")
+    public SharedRoadmapResponse sharedRoadmap(@LoginUser Long userId, @PathVariable String shareCode) {
+        return shareService.get(userId, shareCode);
+    }
+
+    @PostMapping("/shared-roadmaps/{shareCode}/follow")
+    @ResponseStatus(HttpStatus.CREATED)
+    public RoadmapResponse follow(@LoginUser Long userId, @PathVariable String shareCode,
+                                  @Valid @RequestBody FollowRequest request) {
+        return roadmapService.follow(userId, RoadmapShareService.normalize(shareCode), request.mode());
     }
 }

@@ -9,6 +9,7 @@ import com.project.musicroadmap.roadmap.domain.RoadmapStep;
 import com.project.musicroadmap.roadmap.domain.StepStatus;
 import com.project.musicroadmap.roadmap.domain.Verdict;
 import com.project.musicroadmap.roadmap.exploration.ExplorationType;
+import com.project.musicroadmap.roadmap.follow.FollowMode;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
@@ -55,11 +56,13 @@ public final class RoadmapDtos {
 
     public record RoadmapResponse(Long id, ExplorationType explorationType, Long startGenreId,
                                   Long targetGenreId, int maxSteps, RoadmapStatus status, int currentStepIndex,
-                                  int version, List<StepResponse> steps) {
+                                  int version, List<StepResponse> steps, String shareCode,
+                                  Long followedRoadmapId, FollowMode followMode) {
         public static RoadmapResponse from(Roadmap r) {
             return new RoadmapResponse(r.getId(), r.getExplorationType(), r.getStartGenreId(),
                     r.getTargetGenreId(), r.getMaxSteps(), r.getStatus(), r.getCurrentStepIndex(), r.getVersion(),
-                    r.getSteps().stream().map(StepResponse::from).toList());
+                    r.getSteps().stream().map(StepResponse::from).toList(), r.getShareCode(),
+                    r.getFollowedRoadmapId(), r.getFollowMode());
         }
     }
 
@@ -101,5 +104,22 @@ public final class RoadmapDtos {
             return new LogResponse(l.getId(), l.getRoadmapId(), l.getTrackId(), l.getGenreId(), l.getFeedback(),
                     l.getDislikeReason(), l.getMemo(), l.getListenedAt());
         }
+    }
+
+    // --- 공유·따라가기 (기획서 21장) ---
+
+    public record ShareResponse(String shareCode) {
+    }
+
+    /** 공유된 경로의 한 장르와 주인의 판정 (아직 안 지났으면 null) */
+    public record SharedStep(Long genreId, Verdict verdict) {
+    }
+
+    public record SharedRoadmapResponse(String shareCode, String ownerNickname, boolean mine,
+                                        ExplorationType explorationType, Long targetGenreId, RoadmapStatus status,
+                                        List<SharedStep> steps, LocalDateTime sharedAt, long followerCount) {
+    }
+
+    public record FollowRequest(@NotNull FollowMode mode) {
     }
 }
