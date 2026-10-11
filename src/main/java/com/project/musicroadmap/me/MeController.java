@@ -67,20 +67,28 @@ public class MeController {
 
     @GetMapping("/settings")
     public SettingsResponse settings(@LoginUser Long userId) {
-        return new SettingsResponse(userService.getTrackSelectionType(userId));
+        return new SettingsResponse(userService.getTrackSelectionType(userId), userService.usesMyEdges(userId));
     }
 
+    /** 보낸 값만 바꾼다 (null이면 그대로) */
     @PatchMapping("/settings")
-    public SettingsResponse updateSettings(@LoginUser Long userId, @Valid @RequestBody SettingsRequest request) {
-        return new SettingsResponse(userService.changeTrackSelectionType(userId, request.trackSelectionType()));
+    public SettingsResponse updateSettings(@LoginUser Long userId, @RequestBody SettingsRequest request) {
+        if (request.trackSelectionType() != null) {
+            userService.changeTrackSelectionType(userId, request.trackSelectionType());
+        }
+        if (request.useMyEdges() != null) {
+            userService.changeUseMyEdges(userId, request.useMyEdges());
+        }
+        return settings(userId);
     }
 
     public record PreferenceRequest(@NotNull TargetType targetType, @NotNull Long targetId, @NotNull Preference preference) {
     }
 
-    public record SettingsRequest(@NotNull TrackSelectionType trackSelectionType) {
+    public record SettingsRequest(TrackSelectionType trackSelectionType, Boolean useMyEdges) {
     }
 
-    public record SettingsResponse(TrackSelectionType trackSelectionType) {
+    /** useMyEdges: 내가 추가한 연결을 로드맵 계산에 쓸지 (기획서 15.2 규칙 5) */
+    public record SettingsResponse(TrackSelectionType trackSelectionType, boolean useMyEdges) {
     }
 }

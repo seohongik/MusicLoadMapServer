@@ -6,7 +6,6 @@ import com.project.musicroadmap.common.AppClock;
 import com.project.musicroadmap.common.BusinessException;
 import com.project.musicroadmap.common.ErrorCode;
 import com.project.musicroadmap.genre.GenreGraph;
-import com.project.musicroadmap.genre.GenreGraphProvider;
 import com.project.musicroadmap.genre.Track;
 import com.project.musicroadmap.genre.TrackRepository;
 import com.project.musicroadmap.listening.DislikeReason;
@@ -14,6 +13,7 @@ import com.project.musicroadmap.listening.Feedback;
 import com.project.musicroadmap.listening.GenreVerdictPolicy;
 import com.project.musicroadmap.listening.ListeningLog;
 import com.project.musicroadmap.listening.ListeningLogRepository;
+import com.project.musicroadmap.personal.UserGraphService;
 import com.project.musicroadmap.preference.Preference;
 import com.project.musicroadmap.preference.PreferenceService;
 import com.project.musicroadmap.preference.TargetType;
@@ -65,7 +65,7 @@ public class RoadmapService {
     private final TrackRepository trackRepository;
     private final UserRepository userRepository;
     private final VerdictSnapshotRepository snapshotRepository;
-    private final GenreGraphProvider graphProvider;
+    private final UserGraphService userGraphService;
     private final WeightService weightService;
     private final PreferenceService preferenceService;
     private final ExplorationStrategyResolver explorationResolver;
@@ -77,7 +77,7 @@ public class RoadmapService {
 
     @Transactional(readOnly = true)
     public List<PreviewResult> preview(Long userId, PreviewRequest request) {
-        GenreGraph graph = graphProvider.get();
+        GenreGraph graph = userGraphService.graphFor(userId);
         graph.node(request.startGenreId());
         UserWeights weights = weightService.load(userId);
 
@@ -101,7 +101,7 @@ public class RoadmapService {
         if (roadmapRepository.existsByUserIdAndStatus(userId, RoadmapStatus.IN_PROGRESS)) {
             throw new BusinessException(ErrorCode.ROADMAP_ALREADY_IN_PROGRESS);
         }
-        GenreGraph graph = graphProvider.get();
+        GenreGraph graph = userGraphService.graphFor(userId);
         graph.node(request.startGenreId());
         Long target = request.explorationType() == ExplorationType.BRIDGE ? request.targetGenreId() : null;
         if (target != null) {
@@ -303,7 +303,7 @@ public class RoadmapService {
     /** 현재 스텝 판정: 스냅샷 저장 → 가중치 → 재계산 → 다음 스텝 */
     private StepResultResponse completeCurrentStep(Roadmap roadmap, Long userId, Verdict verdict) {
         RoadmapStep step = roadmap.currentStep();
-        GenreGraph graph = graphProvider.get();
+        GenreGraph graph = userGraphService.graphFor(userId);
         UserWeights weights = weightService.load(userId);
 
         // 판정을 바꿀 수 있도록 "판정 직전" 상태를 저장한다

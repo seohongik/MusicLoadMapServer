@@ -34,6 +34,11 @@ public enum ErrorCode {
     CANNOT_FOLLOW_OWN(HttpStatus.BAD_REQUEST, "내 로드맵은 따라갈 수 없어요."),
     NOTHING_TO_FOLLOW(HttpStatus.BAD_REQUEST, "내가 싫어하는 장르를 빼고 나니 따라갈 장르가 없어요. '그대로 따라가기'를 골라 보세요."),
 
+    // 나만의 연결 (기획서 22장)
+    USER_EDGE_SAME_GENRE(HttpStatus.BAD_REQUEST, "같은 장르끼리는 이을 수 없어요."),
+    USER_EDGE_EXISTS(HttpStatus.CONFLICT, "이미 계보도에 있는 연결이에요."),
+    USER_EDGE_CYCLE(HttpStatus.BAD_REQUEST, "이 연결을 넣으면 계보가 제자리로 돌아오게 돼요. 방향을 바꿔 보세요."),
+
     // 선호 (기획서 16장)
     TARGET_NOT_FOUND(HttpStatus.NOT_FOUND, "선호를 저장할 대상을 찾을 수 없어요."),
 
