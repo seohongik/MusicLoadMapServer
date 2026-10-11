@@ -14,6 +14,8 @@ import com.project.musicroadmap.external.musicbrainz.MusicBrainzClient;
 import com.project.musicroadmap.genre.Artist;
 import com.project.musicroadmap.genre.ArtistRepository;
 import com.project.musicroadmap.genre.GenreArtistRepository;
+import com.project.musicroadmap.personal.PersonalService;
+import com.project.musicroadmap.personal.PersonalTargetType;
 import com.project.musicroadmap.preference.TargetType;
 import com.project.musicroadmap.preference.UserPreferences;
 import com.project.musicroadmap.preference.PreferenceService;
@@ -50,6 +52,7 @@ public class ArchiveService {
     private final AlbumRepository albumRepository;
     private final AlbumTrackRepository albumTrackRepository;
     private final PreferenceService preferenceService;
+    private final PersonalService personalService;
     private final MusicBrainzClient musicBrainzClient;
     private final TransactionTemplate transactionTemplate;
     private final AppClock clock;
@@ -70,8 +73,11 @@ public class ArchiveService {
             List<AlbumSummary> albums = albumRepository.findByArtistIdOrderByReleaseYearAscIdAsc(artistId).stream()
                     .map(AlbumSummary::from)
                     .toList();
+            Long official = artist.getPrimaryGenre() == null ? null : artist.getPrimaryGenre().getId();
             return new ArtistDetailResponse(artist.getId(), artist.getName(),
-                    preferences.of(TargetType.ARTIST, artistId), roles, albums, artist.getMbid() != null);
+                    preferences.of(TargetType.ARTIST, artistId), roles, albums, artist.getMbid() != null, official,
+                    personalService.overrideOf(userId, artistId).orElse(null),
+                    personalService.notesOf(userId, PersonalTargetType.ARTIST, artistId));
         });
     }
 
@@ -90,7 +96,8 @@ public class ArchiveService {
                             t.getLengthMs(), preferences.of(TargetType.ALBUM_TRACK, t.getId())))
                     .toList();
             return new AlbumDetailResponse(album.getId(), album.getArtist().getId(), album.getArtist().getName(),
-                    album.getTitle(), album.getReleaseYear(), album.coverUrl(), tracks);
+                    album.getTitle(), album.getReleaseYear(), album.coverUrl(), tracks,
+                    personalService.notesOf(userId, PersonalTargetType.ALBUM, albumId));
         });
     }
 
