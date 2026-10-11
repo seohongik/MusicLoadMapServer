@@ -39,6 +39,10 @@ public enum ErrorCode {
     USER_EDGE_EXISTS(HttpStatus.CONFLICT, "이미 계보도에 있는 연결이에요."),
     USER_EDGE_CYCLE(HttpStatus.BAD_REQUEST, "이 연결을 넣으면 계보가 제자리로 돌아오게 돼요. 방향을 바꿔 보세요."),
 
+    // 가수 관계 (기획서 24장)
+    ARTIST_NOT_LINKED(HttpStatus.BAD_REQUEST, "이 가수는 MusicBrainz와 연결되어 있지 않아 관계를 찾을 수 없어요."),
+    NO_ARTIST_PATH(HttpStatus.NOT_FOUND, "아직 두 가수를 잇는 길을 찾지 못했어요. 관계 정보가 쌓이면 이어질 수 있어요."),
+
     // 선호 (기획서 16장)
     TARGET_NOT_FOUND(HttpStatus.NOT_FOUND, "선호를 저장할 대상을 찾을 수 없어요."),
 

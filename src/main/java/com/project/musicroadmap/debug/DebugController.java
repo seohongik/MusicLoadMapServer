@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class DebugController {
 
     private final AppClock clock;
+    private final com.project.musicroadmap.relation.RelationBatch relationBatch;
 
     @PostMapping("/skip-day")
     public SkipDayResponse skipDay() {
@@ -24,5 +25,14 @@ public class DebugController {
     }
 
     public record SkipDayResponse(LocalDate today) {
+    }
+
+    /** 기획서 24장: 큐레이션 가수와 그 멤버들의 관계를 백그라운드로 가져온다 (초당 1회 제한 때문에 오래 걸림) */
+    @PostMapping("/relations/sync")
+    public RelationSyncResponse syncRelations() {
+        return new RelationSyncResponse(relationBatch.startIfIdle());
+    }
+
+    public record RelationSyncResponse(boolean started) {
     }
 }
