@@ -1,5 +1,7 @@
 package com.project.musicroadmap.archive;
 
+import com.project.musicroadmap.personal.PersonalDtos.GenreOverrideResponse;
+import com.project.musicroadmap.personal.PersonalDtos.MyNotes;
 import com.project.musicroadmap.preference.Preference;
 import java.util.List;
 
@@ -11,6 +13,9 @@ public final class ArchiveDtos {
     /**
      * 가수 상세 (기획서 18장).
      * @param albumsAvailable MusicBrainz ID가 없으면 false (앨범 목록을 가져올 수 없음)
+     * @param officialGenreId 공식 분류 (참조 레이어)
+     * @param myGenre         내가 다르게 분류했으면 값이 있다 (기획서 15.2 규칙 4)
+     * @param myNotes         내 감상과 태그
      */
     public record ArtistDetailResponse(
             Long id,
@@ -18,7 +23,10 @@ public final class ArchiveDtos {
             Preference myPreference,
             List<GenreRole> genreRoles,
             List<AlbumSummary> albums,
-            boolean albumsAvailable) {
+            boolean albumsAvailable,
+            Long officialGenreId,
+            GenreOverrideResponse myGenre,
+            MyNotes myNotes) {
     }
 
     /** 이 가수가 계보도에서 맡은 역할 (장르별 소개) */
@@ -38,7 +46,8 @@ public final class ArchiveDtos {
             String title,
             Integer releaseYear,
             String coverUrl,
-            List<AlbumTrackItem> tracks) {
+            List<AlbumTrackItem> tracks,
+            MyNotes myNotes) {
     }
 
     /** myPreference: 이 곡에 남긴 좋아요/별로 (없으면 null) */
