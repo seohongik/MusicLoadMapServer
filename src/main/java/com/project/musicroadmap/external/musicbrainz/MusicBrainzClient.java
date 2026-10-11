@@ -67,6 +67,18 @@ public class MusicBrainzClient {
         return artist;
     }
 
+    /** 아티스트 사이의 관계 (멤버, 협업 등) */
+    public MbArtistRelations getArtistRelations(String mbid) {
+        MbArtistRelations relations = execute(() -> restClient.get()
+                .uri("/artist/{mbid}?inc=artist-rels&fmt=json", mbid)
+                .retrieve()
+                .body(MbArtistRelations.class));
+        if (relations == null) {
+            throw new BusinessException(ErrorCode.EXTERNAL_ARTIST_NOT_FOUND);
+        }
+        return relations;
+    }
+
     /** 아티스트의 위키데이터 ID (없으면 빈 값) */
     public java.util.Optional<String> wikidataId(String mbid) {
         MbUrlRelations relations = execute(() -> restClient.get()
