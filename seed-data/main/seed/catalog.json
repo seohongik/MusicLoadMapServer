@@ -405,6 +405,60 @@
    "description": "808 드럼의 굵은 베이스와 잘게 쪼갠 하이햇이 특징인 애틀랜타발 힙합.",
    "posX": 1220,
    "posY": 720
+  },
+  {
+   "code": "TRANCE",
+   "name": "Trance",
+   "nameKo": "트랜스",
+   "originDecade": 1990,
+   "description": "테크노와 하우스의 반복 위에 길게 쌓아 올리는 신시사이저 멜로디와 고조되는 전개를 얹은 유럽의 댄스 음악.",
+   "posX": 1520,
+   "posY": 500
+  },
+  {
+   "code": "PROGRESSIVE_HOUSE",
+   "name": "Progressive House",
+   "nameKo": "프로그레시브 하우스",
+   "originDecade": 1990,
+   "description": "하우스의 리듬을 유지하면서 긴 호흡으로 천천히 쌓아 올리는 영국 클럽 음악. 2010년대 페스티벌 EDM의 뼈대가 됐다.",
+   "posX": 1670,
+   "posY": 440
+  },
+  {
+   "code": "ELECTRO_HOUSE",
+   "name": "Electro House",
+   "nameKo": "일렉트로 하우스",
+   "originDecade": 2000,
+   "description": "하우스에 거칠게 일그러진 신시사이저 베이스를 얹은 음악. 2010년대 '빅룸' 페스티벌 사운드로 커졌다.",
+   "posX": 1520,
+   "posY": 380
+  },
+  {
+   "code": "DUBSTEP",
+   "name": "Dubstep",
+   "nameKo": "덥스텝",
+   "originDecade": 2000,
+   "description": "런던 남부에서 드럼 앤 베이스·UK 개러지를 느린 하프타임 리듬과 울리는 서브베이스로 바꾼 음악.",
+   "posX": 1520,
+   "posY": 620
+  },
+  {
+   "code": "HARDSTYLE",
+   "name": "Hardstyle",
+   "nameKo": "하드스타일",
+   "originDecade": 2000,
+   "description": "네덜란드에서 하드 트랜스와 하드코어 테크노를 섞어 만든, 강하게 일그러진 킥이 특징인 댄스 음악.",
+   "posX": 1670,
+   "posY": 560
+  },
+  {
+   "code": "FUTURE_BASS",
+   "name": "Future Bass",
+   "nameKo": "퓨처 베이스",
+   "originDecade": 2010,
+   "description": "덥스텝과 트랩의 리듬 위에 출렁이는 화음 신시사이저를 얹은, 밝고 감성적인 2010년대 전자음악.",
+   "posX": 1520,
+   "posY": 740
   }
  ],
  "edges": [
@@ -687,6 +741,46 @@
   {
    "from": "HARD_BOP",
    "to": "JAZZ_RAP"
+  },
+  {
+   "from": "TECHNO",
+   "to": "TRANCE"
+  },
+  {
+   "from": "HOUSE",
+   "to": "TRANCE"
+  },
+  {
+   "from": "HOUSE",
+   "to": "PROGRESSIVE_HOUSE"
+  },
+  {
+   "from": "TRANCE",
+   "to": "PROGRESSIVE_HOUSE"
+  },
+  {
+   "from": "HOUSE",
+   "to": "ELECTRO_HOUSE"
+  },
+  {
+   "from": "DRUM_AND_BASS",
+   "to": "DUBSTEP"
+  },
+  {
+   "from": "TRANCE",
+   "to": "HARDSTYLE"
+  },
+  {
+   "from": "TECHNO",
+   "to": "HARDSTYLE"
+  },
+  {
+   "from": "DUBSTEP",
+   "to": "FUTURE_BASS"
+  },
+  {
+   "from": "TRAP",
+   "to": "FUTURE_BASS"
   }
  ],
  "tracks": [
@@ -2341,6 +2435,181 @@
    "artist": "Migos",
    "year": 2016,
    "intro": "삼연음 플로우로 트랩의 랩 방식을 바꾼 애틀랜타 3인조."
+  },
+  {
+   "genre": "TRANCE",
+   "title": "For an Angel",
+   "artist": "Paul van Dyk",
+   "year": 1994,
+   "intro": "베를린 출신 DJ. 맑고 서정적인 멜로디로 트랜스의 기본 문법을 만든 1세대."
+  },
+  {
+   "genre": "TRANCE",
+   "title": "Children",
+   "artist": "Robert Miles",
+   "year": 1995,
+   "intro": "피아노 멜로디를 앞세운 '드림 트랜스'로 전자음악을 유럽 팝 차트 1위에 올린 음악가."
+  },
+  {
+   "genre": "TRANCE",
+   "title": "Communication",
+   "artist": "Armin van Buuren",
+   "year": 1999,
+   "intro": "라디오 쇼 'A State of Trance'로 트랜스를 전 세계에 퍼뜨린 네덜란드 DJ."
+  },
+  {
+   "genre": "TRANCE",
+   "title": "Adagio for Strings",
+   "artist": "Tiësto",
+   "year": 2004,
+   "intro": "아테네 올림픽 개막식 공연으로 DJ를 무대의 주인공으로 만든 네덜란드 DJ. 트랜스에서 출발해 EDM 시대를 열었다."
+  },
+  {
+   "genre": "PROGRESSIVE_HOUSE",
+   "title": "Xpander",
+   "artist": "Sasha",
+   "year": 1999,
+   "intro": "존 디그위드와 함께 영국 프로그레시브 하우스를 대표한 DJ. 길고 서서히 고조되는 구성을 다듬었다."
+  },
+  {
+   "genre": "PROGRESSIVE_HOUSE",
+   "title": "Strobe",
+   "artist": "deadmau5",
+   "year": 2009,
+   "intro": "쥐 헬멧으로 유명한 캐나다 프로듀서. 10분 넘게 천천히 쌓아 올리는 곡으로 장르의 미학을 보여 줬다."
+  },
+  {
+   "genre": "PROGRESSIVE_HOUSE",
+   "title": "Levels",
+   "artist": "Avicii",
+   "year": 2011,
+   "intro": "포크와 소울 샘플을 프로그레시브 하우스에 얹어 EDM을 팝 한가운데로 가져간 스웨덴 프로듀서."
+  },
+  {
+   "genre": "PROGRESSIVE_HOUSE",
+   "title": "Don't You Worry Child",
+   "artist": "Swedish House Mafia",
+   "year": 2012,
+   "intro": "스웨덴 DJ 세 명이 모인 그룹. 대형 페스티벌의 떼창형 EDM을 상징한다."
+  },
+  {
+   "genre": "PROGRESSIVE_HOUSE",
+   "title": "Opus",
+   "artist": "Eric Prydz",
+   "year": 2015,
+   "intro": "클럽용 실험과 대형 무대 연출을 함께 밀고 나간 스웨덴 프로듀서."
+  },
+  {
+   "genre": "ELECTRO_HOUSE",
+   "title": "Satisfaction",
+   "artist": "Benny Benassi",
+   "year": 2003,
+   "intro": "찌그러진 신시사이저 베이스 한 줄로 일렉트로 하우스의 소리를 정의한 이탈리아 프로듀서."
+  },
+  {
+   "genre": "ELECTRO_HOUSE",
+   "title": "D.A.N.C.E.",
+   "artist": "Justice",
+   "year": 2006,
+   "intro": "록처럼 거칠게 깨진 사운드로 2000년대 프랑스 일렉트로를 이끈 듀오."
+  },
+  {
+   "genre": "ELECTRO_HOUSE",
+   "title": "Titanium",
+   "artist": "David Guetta",
+   "year": 2011,
+   "intro": "팝 가수와 협업해 일렉트로 하우스를 전 세계 차트로 가져간 프랑스 DJ."
+  },
+  {
+   "genre": "ELECTRO_HOUSE",
+   "title": "Animals",
+   "artist": "Martin Garrix",
+   "year": 2013,
+   "intro": "10대에 이 곡으로 '빅룸' 페스티벌 사운드의 얼굴이 된 네덜란드 프로듀서."
+  },
+  {
+   "genre": "DUBSTEP",
+   "title": "Midnight Request Line",
+   "artist": "Skream",
+   "year": 2005,
+   "intro": "런던 크로이던에서 덥스텝의 초기 소리를 만든 프로듀서. 이 곡이 장르를 클럽 밖으로 알렸다."
+  },
+  {
+   "genre": "DUBSTEP",
+   "title": "Night",
+   "artist": "Benga",
+   "year": 2007,
+   "intro": "스크림과 함께 덥스텝 1세대를 이끈 프로듀서. 코키와 만든 이 곡은 장르의 대표 클럽 트랙이다."
+  },
+  {
+   "genre": "DUBSTEP",
+   "title": "Archangel",
+   "artist": "Burial",
+   "year": 2007,
+   "intro": "정체를 숨긴 채 비 오는 밤 런던 같은 쓸쓸한 덥스텝을 만든 프로듀서."
+  },
+  {
+   "genre": "DUBSTEP",
+   "title": "Scary Monsters and Nice Sprites",
+   "artist": "Skrillex",
+   "year": 2010,
+   "intro": "금속성 베이스로 미국식 '브로스텝'을 열고 덥스텝을 EDM의 중심으로 끌어온 프로듀서."
+  },
+  {
+   "genre": "HARDSTYLE",
+   "title": "Words From the Gang",
+   "artist": "Coone",
+   "year": 2007,
+   "intro": "벨기에 출신 하드스타일 DJ. 개성 강한 보컬 샘플로 장르의 대중화를 이끌었다."
+  },
+  {
+   "genre": "HARDSTYLE",
+   "title": "Crump",
+   "artist": "Noisecontrollers",
+   "year": 2007,
+   "intro": "멜로디와 무거운 킥을 균형 있게 다룬 네덜란드 하드스타일 프로듀서."
+  },
+  {
+   "genre": "HARDSTYLE",
+   "title": "Dragonborn",
+   "artist": "Headhunterz",
+   "year": 2011,
+   "intro": "서사적인 멜로디로 하드스타일을 대형 무대에 올린 네덜란드 DJ. 게임 '스카이림' 주제가를 재해석했다."
+  },
+  {
+   "genre": "HARDSTYLE",
+   "title": "Lose My Mind",
+   "artist": "Brennan Heart",
+   "year": 2011,
+   "intro": "와일드스타일즈와 함께 감성적인 보컬 하드스타일을 대표한 네덜란드 DJ."
+  },
+  {
+   "genre": "FUTURE_BASS",
+   "title": "Sad Machine",
+   "artist": "Porter Robinson",
+   "year": 2014,
+   "intro": "애니메이션 같은 서정성과 보컬 합성으로 퓨처 베이스의 감성을 만든 미국 프로듀서."
+  },
+  {
+   "genre": "FUTURE_BASS",
+   "title": "It's Strange",
+   "artist": "Louis The Child",
+   "year": 2015,
+   "intro": "시카고 출신 2인조. 밝고 통통 튀는 퓨처 베이스로 장르를 팝 쪽으로 넓혔다."
+  },
+  {
+   "genre": "FUTURE_BASS",
+   "title": "Never Be Like You",
+   "artist": "Flume",
+   "year": 2016,
+   "intro": "출렁이는 화음과 잘게 쪼갠 보컬로 퓨처 베이스의 소리를 정의한 호주 프로듀서."
+  },
+  {
+   "genre": "FUTURE_BASS",
+   "title": "Light",
+   "artist": "San Holo",
+   "year": 2016,
+   "intro": "기타 연주를 퓨처 베이스에 섞어 따뜻한 질감을 더한 네덜란드 프로듀서."
   }
  ],
  "aliases": {
@@ -2480,6 +2749,24 @@
   ],
   "TRAP": [
    "trap music"
+  ],
+  "TRANCE": [
+   "uplifting trance",
+   "psychedelic trance",
+   "psytrance",
+   "progressive trance"
+  ],
+  "ELECTRO_HOUSE": [
+   "big room",
+   "big room house",
+   "complextro",
+   "edm"
+  ],
+  "DUBSTEP": [
+   "brostep"
+  ],
+  "HARDSTYLE": [
+   "rawstyle"
   ]
  },
  "artistMbids": {
@@ -2714,6 +3001,31 @@
   "Tricky": "5bf64d94-efd9-4334-96fd-e6197b0b02b8",
   "UGK": "9603810b-5d6d-41a6-aca8-330ef966d55c",
   "Warren G": "85d7666c-d3ce-4e2c-8b1b-f20db7cdae4f",
-  "Wu-Tang Clan": "0febdcf7-4e1f-4661-9493-b40427de2c13"
+  "Wu-Tang Clan": "0febdcf7-4e1f-4661-9493-b40427de2c13",
+  "Armin van Buuren": "477b8c0c-c5fc-4ad2-b5b2-191f0bf2a9df",
+  "Avicii": "c85cfd6b-b1e9-4a50-bd55-eb725f04f7d5",
+  "Benga": "d3ba1c50-d403-40df-8eac-80d74551a7e3",
+  "Benny Benassi": "674bf89f-8e70-4472-929d-6b4ed6f98c88",
+  "Brennan Heart": "6f95ac0e-728c-4b4c-b08e-e8519d2e6ab6",
+  "Burial": "9ddce51c-2b75-4b3e-ac8c-1db09e7c89c6",
+  "Coone": "8ec5439a-ff50-4b0f-9e75-fc3e517e75ff",
+  "David Guetta": "302bd7b9-d012-4360-897a-93b00c855680",
+  "Eric Prydz": "35dac7d2-0b1f-470f-9a5a-c53c8821f6d6",
+  "Flume": "35fd8d42-b4a6-4414-9827-8766bd0daa3c",
+  "Headhunterz": "79dbc936-adf2-4a29-8e01-c1fbe5613b0a",
+  "Justice": "860b2707-6153-4e3a-aa57-74d2b42c55b5",
+  "Louis The Child": "a56f9cc3-1569-4205-8514-9c5c545d724d",
+  "Martin Garrix": "3e1f2ee4-16be-4406-bf18-6173840cf2b1",
+  "Noisecontrollers": "6c4335db-e676-418f-98e2-f8037ac88576",
+  "Paul van Dyk": "092ca127-2e07-4cbd-9cba-e412b4ddddd9",
+  "Porter Robinson": "4ae36ade-1798-48c4-b06b-cc68b7d3d83f",
+  "Robert Miles": "e83144dd-bb95-49fe-b1dd-00bab25cca9e",
+  "San Holo": "23101701-cecf-4c9b-9b4c-d6a249eac118",
+  "Sasha": "68be8273-cb12-4053-964d-157b7e5cf265",
+  "Skream": "fb5ee67e-e31a-40cf-8b06-5f1a0f53529a",
+  "Skrillex": "ae002c5d-aac6-490b-a39a-30aa9e2edf2b",
+  "Swedish House Mafia": "99075985-0d80-4692-a15e-b16f78831792",
+  "Tiësto": "aabb1d9f-be12-45b3-a84d-a1fc3e8181fd",
+  "deadmau5": "4a00ec9d-c635-463a-8cd4-eb61725f0c60"
  }
 }
